@@ -1,0 +1,54 @@
+body{
+    background-color: #222E50;
+    color: #BCD8C1;
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0e1320;
+}
+header a{
+    text-decoration: none;
+    color: #E9D985;
+}
+header .navlogoitems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .navlogoitems #navlogo{
+    padding: 20px 30px;
+}
+header .navlogoitems ul{
+    display: flex;
+    list-style: none;
+}
+header .navlogoitems ul li{
+    text-align: center;
+}
+header .navlogoitems ul li a{
+    color: #BCD8C1;
+    padding: 20px 10px;
+    text-decoration: none;
+}
+header .navlogoitems ul li a:hover{
+    background-color: #007991;
+    color: #222E50;
+}
+header .navlogin{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+}
+header .navlogin a{
+    border: solid 3px #007991;
+    border-radius: 20px;
+    padding: 8px 10px;
+}
+header .navlogin a:hover{
+    border: solid 3px #007991;
+    background-color: #007991;
+    color: #222E50;
+}
