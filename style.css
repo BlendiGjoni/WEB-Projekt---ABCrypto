@@ -52,3 +52,36 @@ header .navlogin a:hover{
     background-color: #007991;
     color: #222E50;
 }
+main{
+    margin-top: 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+main .home{
+    width: 40%;
+    margin-left: 2%;
+}
+main #maintext{
+    font-size: 95px;
+}
+main #smalltext{
+    color: #8c9e8f;
+    font-size: 25px;
+}
+main .getstartedbtn{
+    margin-top: 50px;
+}
+main .getstartedbtn a{
+    text-decoration: none;
+    color: white;
+    background-color: #007991;
+    border: solid 3px #007991;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+main .getstartedbtn a:hover{
+    background-color: #222E50;
+    border: solid 3px #007991;
+}
