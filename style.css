@@ -1,15 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-    background-color: #222E50;
-    color: #BCD8C1;
-    margin: 0px;
+    background-color: #000;
+    color: #fff;
     font-family: 'Ubuntu', sans-serif;
 }
 header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #0e1320;
+    width: 100%;
+    border-bottom: #3c00ff 2px solid;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
-header a{
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 10%;
+}
+header nav a{
+    text-decoration: none;
+    color: #fff;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    list-style-type: none;
+    font-size: larger;
+    font-style: bold;
+    padding: 0px 10px;
+}
+header nav ul li a{
+    padding-bottom: 16px;
+}
+header nav ul li a:hover{
+    border-bottom: #fff 2px solid;
+}
+.navlogin{
+    font-size: larger;
+    font-style: bold;
+    border: #000 2px solid;
+    border-radius: 25px;    
+}
+.navlogin:hover{
+    border: #fff 2px solid;
+    background-color: #000;
+    color: white;
+}
+/* header a{
     text-decoration: none;
     color: #E9D985;
 }
@@ -29,13 +71,13 @@ header .navlogoitems ul li{
     text-align: center;
 }
 header .navlogoitems ul li a{
-    color: #BCD8C1;
+    color: #fff;
     padding: 20px 10px;
     text-decoration: none;
 }
 header .navlogoitems ul li a:hover{
-    background-color: #007991;
-    color: #222E50;
+    border-bottom: 3px #fff solid ;
+    color: #fff;
 }
 header .navlogin{
     margin-top: auto;
@@ -51,7 +93,7 @@ header .navlogin a:hover{
     border: solid 3px #007991;
     background-color: #007991;
     color: #222E50;
-}
+} */
 main{
     margin-top: 6%;
     flex-direction: column;
