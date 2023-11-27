@@ -6,6 +6,8 @@
     list-style: none;
 }
 body{
+    display: flex;
+    flex-direction: column;
     background: #1B2366;
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
@@ -36,10 +38,8 @@ header nav ul{
     display: flex;
 }
 header nav ul a{
-    margin: ;
     padding: 5px 15px;
     color: #fff;
-    font-size: ;
     transition: all .3s ease;
 }
 header nav ul a:hover{
@@ -99,22 +99,32 @@ header #menu-icon{
     nav ul.open{
         top: 100%;
     }
+    main #hero{
+        display: none;
+    }
+    main {
+        display: flex;
+        justify-content: flex-start !important;
+        margin-left: 5%;
+        margin-top: 13% !important;
+    }
 }
 main{
     display: flex;
     margin-top: 6%;
     justify-content: space-around;
-
+    
 }
 main .home{
     width: 40%;
     flex-direction: column;
     justify-content: flex-start;  
 }
-main .hero{
+main #hero{
     width: 40%;
+    align-content: center;
 }
-main .hero img{
+main #hero img{
     width: 100%;
 }
 main #maintext{
@@ -132,26 +142,85 @@ main .getstartedbtn{
 main .getstartedbtn a{
     text-decoration: none;
     color: white;
-    background-color: #222A89;
-    border: solid 3px #222A89;
+    display: inline-block;
+    background-color: #6BA1C4;
+    border: solid 3px #6BA1C4;
     transition: all 0.3s ease;
     border-radius: 20px;
     padding: 10px 20px;
 }
 main .getstartedbtn a:hover{
-    background-color: black;
-    border: solid 3px #222A89;
+    background-color:#1B2366;
+    border: solid 3px #6BA1C4;
+}
+@media (max-width: 1470px){
+    main #maintext{
+        font-size: 75px !important;
+    }
+    main{
+        align-items: center;
+        align-content:center;
+    }
+    main #smalltext{
+        font-size: 20px!important;
+        margin-top: 20px;
+    }
+    main .getstartedbtn a{
+        font-size: 15px;
+    }
+    footer{
+        margin-top: 30px !important;
+    }
+}
+@media (max-width:1160px) {
+    main #maintext{
+        font-size: 60px!important;
+    }
+    main{
+        align-content:center;
+        align-content:center;
+    }
+    main #smalltext{
+        font-size: 15px!important;
+        margin-top: 20px;
+    }
+    main .getstartedbtn a{
+        font-size: 15px;
+    }
+    footer{
+        margin-top: 30px!important;
+    }
+}
+@media (max-width:981px) {
+    main #maintext{
+        font-size: 50px!important;
+    }
+    main{
+        align-items: center;
+        align-content:center;
+    }
+    main #smalltext{
+        font-size: 15px!important;
+    }
+    main.getstartedbtn a{
+        font-size: 15px;
+    }
+    footer{
+        margin-top: 30px!important;
+    }
 }
 footer{
     display: flex;
-    min-height: 100vh; 
-    margin-top: 50px;
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: fit-content;
+    margin-top: 50px;
+    padding: 10px 10%;
     width: 100%;
     background-color: rgb(26, 26, 26);
     color: #fff;
-    padding: 10px 10%;
-    align-items: center;
 }
 .first-part-footer{
     display: flex;
@@ -181,12 +250,17 @@ footer ul li i:hover{
 }
 footer .second-part-footer{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 30px;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+footer .second-part-footer div{
+    width: 200px;
+    margin-top: 30px;
 }
 .second-part-footer p strong {
     font-size: x-large;
