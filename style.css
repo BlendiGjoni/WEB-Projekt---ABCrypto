@@ -2,98 +2,104 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 body{
-    background-color: #000;
+    background: #1B2366;
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
 }
 header{
     width: 100%;
-    border-bottom: #3c00ff 2px solid;
-    position: fixed;
-    top: 0;
-    right: 0;
 }
 header nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 10%;
+    padding: 20px 7%;
+    background: #00011fa0;
+    backdrop-filter: blur(20px);
+    transform: all .5s ease;
 }
-header nav a{
-    text-decoration: none;
+header .navlogo{
     color: #fff;
+    font-size: 20px;
+    cursor: pointer;
 }
 header nav ul{
     display: flex;
 }
-header nav ul li{
-    list-style-type: none;
-    font-size: larger;
-    font-style: bold;
-    padding: 0px 10px;
-}
-header nav ul li a{
-    padding-bottom: 16px;
-}
-header nav ul li a:hover{
-    border-bottom: #fff 2px solid;
-}
-.navlogin{
-    font-size: larger;
-    font-style: bold;
-    border: #000 2px solid;
-    border-radius: 25px;    
-}
-.navlogin:hover{
-    border: #fff 2px solid;
-    background-color: #000;
-    color: white;
-}
-/* header a{
-    text-decoration: none;
-    color: #E9D985;
-}
-header .navlogoitems{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header .navlogoitems #navlogo{
-    padding: 20px 30px;
-}
-header .navlogoitems ul{
-    display: flex;
-    list-style: none;
-}
-header .navlogoitems ul li{
-    text-align: center;
-}
-header .navlogoitems ul li a{
+header nav ul a{
+    margin: ;
+    padding: 5px 15px;
     color: #fff;
-    padding: 20px 10px;
-    text-decoration: none;
+    font-size: ;
+    transition: all .3s ease;
 }
-header .navlogoitems ul li a:hover{
-    border-bottom: 3px #fff solid ;
+header nav ul a:hover{
+    color: #6BA1C4;
+}
+header .loginbtn{
+    display: inline-block;
+    padding: 10px 15px;
     color: #fff;
-}
-header .navlogin{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 20px;
-}
-header .navlogin a{
-    border: solid 3px #007991;
+    background: #6BA1C4;
     border-radius: 20px;
-    padding: 8px 10px;
+    font-size: 15px;
+    border: 2px solid transparent;
+    transition: all .3s ease;
 }
-header .navlogin a:hover{
-    border: solid 3px #007991;
-    background-color: #007991;
-    color: #222E50;
-} */
+header .loginbtn:hover{
+    background: transparent;
+    border: 2px solid #6BA1C4;
+    color: #fff;
+}
+header #menu-icon{
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 1350px){
+    header nav{
+        padding: 15px 4%;
+    }
+}
+@media (max-width: 860px){
+    header #menu-icon{
+        display: block;
+    }
+    header nav ul{
+        position: absolute;
+        top: -800px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #6BA1C4;
+        transition: all .5s ease;
+        text-align: center;
+    }
+    header nav ul a{
+        color: #fff;
+        padding: 1rem;
+        margin: 1rem;
+        display: block;
+    }
+    header nav ul a:hover{
+        background: #fff;
+        color: black;
+    }
+    nav ul.open{
+        top: 100%;
+    }
+}
 main{
     display: flex;
     margin-top: 6%;
@@ -128,6 +134,7 @@ main .getstartedbtn a{
     color: white;
     background-color: #222A89;
     border: solid 3px #222A89;
+    transition: all 0.3s ease;
     border-radius: 20px;
     padding: 10px 20px;
 }
