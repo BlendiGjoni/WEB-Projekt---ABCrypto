@@ -104,10 +104,76 @@ header #menu-icon{
     }
     main {
         display: flex;
-        justify-content: flex-start !important;
-        margin-left: 5%;
+        width: 100%;
+        justify-content: center !important;
         margin-top: 13% !important;
     }
+    main #maintext{
+        font-size: 100px !important;
+        text-align: center;
+        width: 100%;
+    }
+}
+#login_popup{
+    display: none !important;
+    flex-direction: column;
+    position: fixed !important;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 200px;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 85px;
+    font-size: 25px !important;
+    border: 2px #1B2366;
+    border-radius: 35px;
+    background: #0a0e39b6;
+    backdrop-filter: blur(20px);
+}
+form div{
+    margin: 15px;
+}
+form input{
+    width: 300px;
+    padding: 10px;
+    border: transparent;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+    margin-top: 5px;
+}
+form .loginsub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+form #loginsubbtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    background: #3654b1;
+    color: #fff;
+    font-size: 20px;
+    border: 3px solid;
+    border-radius: 20px;
+    border: 2px solid #3654b1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+form #loginsubbtn:hover{
+    background: transparent;
+    border: 2px solid #3654b1;
+    color: #fff;
 }
 main{
     display: flex;
@@ -175,10 +241,14 @@ main .getstartedbtn a:hover{
 @media (max-width:1160px) {
     main #maintext{
         font-size: 60px!important;
+        width: 50%;
     }
     main{
         align-content:center;
-        align-content:center;
+        width: 100%;
+    }
+    main .home{
+        width: 50%;
     }
     main #smalltext{
         font-size: 15px!important;
@@ -191,13 +261,22 @@ main .getstartedbtn a:hover{
         margin-top: 30px!important;
     }
 }
+@media (max-width: 1023){
+    main #hero{
+        width: 40%;
+    }
+    main .home{
+        width: 50%;
+    }
+}
 @media (max-width:981px) {
     main #maintext{
-        font-size: 50px!important;
+        font-size: 90px!important;
     }
     main{
         align-items: center;
         align-content:center;
+        width: 100%;
     }
     main #smalltext{
         font-size: 15px!important;
@@ -207,6 +286,82 @@ main .getstartedbtn a:hover{
     }
     footer{
         margin-top: 30px!important;
+        width: 100%;
+    }
+    footer.social{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    main #maintext{
+        font-size: 80px!important;
+    }
+    main{
+        align-items: center;
+        align-content:center;
+        width: 100%;
+    }
+    main #smalltext{
+        font-size: 15px!important;
+    }
+    main.getstartedbtn a{
+        font-size: 15px;
+    }
+    footer{
+        margin-top: 30px!important;
+        width: 100%;
+    }
+    footer.social{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    main #maintext{
+        font-size: 70px!important;
+    }
+    main{
+        align-items: center;
+        align-content:center;
+        width: 100%;
+    }
+    main #smalltext{
+        font-size: 15px!important;
+    }
+    main.getstartedbtn a{
+        font-size: 15px;
+    }
+    footer{
+        margin-top: 30px!important;
+        width: 100%;
+    }
+    footer.social{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    main #maintext{
+        font-size: 60px!important;
+    }
+    main{
+        align-items: center;
+        align-content:center;
+        width: 100%;
+    }
+    main #smalltext{
+        font-size: 15px!important;
+    }
+    main.getstartedbtn a{
+        font-size: 15px;
+    }
+    footer{
+        margin-top: 30px!important;
+        width: 100%;
+    }
+    footer.social{
+        width: 100%;
     }
 }
 footer{
