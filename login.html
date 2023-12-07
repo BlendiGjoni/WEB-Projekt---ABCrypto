@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="shortcut icon" type="image/png" href="assets/ABCRYPTO Logo - Original - 5000x5000.png">
     <title>Login ABCrypto</title>
 </head>
+
 <body class="loginbody">
-    <div id="loginbg">
-        <img src="assets/loginimg.png" alt="">
-    </div>    
-    <div>
+    <header>
+        <nav>
+            <a href="#" class="navlogo">ABCrypto</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <ul>
+                <li><a href="index.html" id="current">Home</a></li>
+                <li><a href="#footer">About Us</a></li>
+                <li><a target="_blank" href="market.html">Market</a></li>
+                <li><a href="#">Buy Crypto</a></li>
+            </ul>
+            <a href="login.html" class="loginbtn" id="login-loginbtn">Log In</a>
+        </nav>
+    </header>
+    <main class="loginmain">
         <form class="login_popup" id="loginpop">
             <div id="logintxt">Login</div>
             <div class="username_email">Username: <input type="text" id="user"></div>
@@ -20,6 +34,61 @@
             <div class="loginsub"><button id="loginsubbtn">Login</button></div>
             <div class="registerbtn"><a href="" id="registerbtn">Register</a></div>
         </form>
-    </div>
+        <div class="loginhero">
+            <img src="assets/babella.png" alt="" width="500px">
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="first-part-footer">
+            <div class="footer-logo"><img src="" alt="">
+                <img src="assets/ABCRYPTO Logo - Original - 5000x5000.png" alt="">
+            </div>
+            <div class="socials">
+                <ul>
+                    <li><a href=""><i class='bx bxl-facebook-square'></i></a></li>
+                    <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
+                    <li><a href=""><i class='bx bxl-twitter'></i></a></li>
+                    <li><a href=""><i class='bx bxl-youtube'></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="second-part-footer">
+            <div class="company">
+                <p><strong>Company</strong></p>
+                <p><a href="">About Us</a></p>
+                <p><a href="">Careers</a></p>
+                <p><a href="">Affiliates</a></p>
+                <p><a href="">Blog</a></p>
+                <p><a href="">Cookie policy</a></p>
+            </div>
+            <div class="individuals">
+                <p><strong>Individuals</strong></p>
+                <p><a href="">Buy & Sell</a></p>
+                <p><a href="">Earn Crypto</a></p>
+                <p><a href="">Wallet</a></p>
+                <p><a href="">NFT</a></p>
+                <p><a href="">Card</a></p>
+            </div>
+            <div class="support">
+                <p><strong>Support</strong></p>
+                <p><a href="">Help Center</a></p>
+                <p><a href="">Contact us</a></p>
+                <p><a href="">Create account</a></p>
+                <p><a href="">Account Info</a></p>
+                <p><a href="">Payment Methods</a></p>
+            </div>
+            <div class="learn">
+                <p><strong>Learn</strong></p>
+                <p><a href="">Crypto Basics</a></p>
+                <p><a href="">Tips and Tutorials</a></p>
+                <p><a href="">Market Updates</a></p>
+                <p><a href="">What is Crypto?</a></p>
+                <p><a href="">What is blockchain</a></p>
+            </div>
+        </div>
+        <h1>ABCrypto</h1>
+        <p id="copyright">&copy; All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
