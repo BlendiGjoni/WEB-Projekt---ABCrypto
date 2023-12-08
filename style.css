@@ -129,6 +129,15 @@ header #menu-icon{
         width: 500px !important;
         justify-content: center;
     }
+    main .main-customer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 100px;
+        margin-left: 5%;
+        gap: 30px;
+    }
     .marketmain{
         margin: 5% !important;
     }
@@ -170,6 +179,25 @@ header #menu-icon{
     .registermainpage .registerimage img{
         width: 60%;
     }
+    .buycrypto_main{
+        justify-content: center;
+        width: 100%;
+        margin-top: 100px !important;
+        margin-left: 0;
+    }
+    .buycrypto_main .buycrypto-hero{
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .buycrypto-hero form{
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    .buycrypto_main .buycrypto-hero img{
+        width: 90% !important;
+    }
 }
 @media(max-width: 500px){
     body{
@@ -201,6 +229,11 @@ header #menu-icon{
         width: 300px!important;
         justify-content: center;
     }
+    main .main-customer {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
     .registermainpage {
         margin: 10% 5%;
     }
@@ -209,6 +242,9 @@ header #menu-icon{
     }
     .registerform input{
         width: 100% !important;
+    }
+    .buycrypto_main .buycrypto-hero form{
+        width: 95%;
     }
     footer{
         width: 100%;
@@ -357,9 +393,36 @@ main .main-first-page .getstartedbtn a:hover{
 main .main-customer{
     display: flex;
     justify-content: space-around;
+    margin-top: 13%;
+    margin-bottom: 15%;
 }
 main .main-customer .groups{
     display: flex;
+}
+main .main-customer .group-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: larger;
+}
+main .main-customer i{
+    font-size: 60px;
+    border: transparent;
+    padding: 10px;
+    border-radius: 100%;
+}
+main .main-customer #chart i{
+    color: #014231;
+    background-color: #00b5887e;
+}
+main .main-customer #usericon i{
+    color: #FDA91D;
+    background-color: #fdcc1d4b;
+}
+main .main-customer #world i{
+    color: #C6204C;
+    background-color: #c6204c40;
 }
 .registermainpage{
     display: flex;
@@ -639,6 +702,87 @@ main .main-customer .groups{
     border-radius: 30px;
 }
 .main-third-page .text-part a:hover{
+    color: #C6204C;
+    background: #fff;
+}
+.buycrypto_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    gap: 50px;
+    text-align: center;
+}
+.buycrypto_main .buycrypto-text h1{
+    font-size: 80px;
+    margin-bottom: 2%;
+}
+.buycrypto_main .buycrypto-text p{
+    font-size: 30px;
+}
+.buycrypto_main .buycrypto-hero{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.buycrypto_main .buycrypto-hero img{
+    width: 500px;
+}
+.buycrypto_main .buycrypto-hero form .select-coin{
+    font-size: 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #002D22;
+    border: 1px solid #002D22;
+    padding: 10px 0px;
+    width: 300px;
+    border-radius: 20px;
+}
+.buycrypto_main form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 450px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border-radius: 35px;
+    background: #fff;
+    backdrop-filter: blur(20px);
+
+}
+.buycrypto-form-text{
+    font-size: 20px;
+}
+.buycrypto_main .buycrypto-hero form input{
+    background-color: #fff;
+    color: #002D22;
+    border: 1px solid #002D22;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 240px;
+    padding: 14px 10px;
+    text-align: right;
+}
+.buycrypto_main form .select-currency{
+    padding: 13px 0px;
+    background-color: #fff;
+    color: #002D22;
+    border: 1px solid #002D22;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.buycrypto_form button{
+    padding: 10px 20px;
+    width: 300px;
+    color: #fff;
+    font-size: 20px;
+    background: #C6204C;
+    border: 3px solid #C6204C;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.buycrypto_main form button:hover{
     color: #C6204C;
     background: #fff;
 }
