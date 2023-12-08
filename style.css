@@ -151,13 +151,24 @@ header #menu-icon{
     .main-third-page .text-part{
         width: 100% !important;
     }
-    form{
+    .loginform{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
         margin-left: 0;
+    }
+    .registermainpage{
+        flex-direction: column;
+    }
+    .registermainpage .registerimage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .registermainpage .registerimage img{
+        width: 60%;
     }
 }
 @media(max-width: 500px){
@@ -190,6 +201,15 @@ header #menu-icon{
         width: 300px!important;
         justify-content: center;
     }
+    .registermainpage {
+        margin: 10% 5%;
+    }
+    .registerform{
+        width: 100% !important;
+    }
+    .registerform input{
+        width: 100% !important;
+    }
     footer{
         width: 100%;
     }
@@ -213,7 +233,7 @@ header #menu-icon{
     height: 100%;
     margin: 150px 0px 150px 0px;
 }
-form{
+.loginform{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -227,13 +247,13 @@ form{
     background: #fff;
     backdrop-filter: blur(20px);
 }
-form #logintxt{
+.loginform #logintxt{
     font-size: 40px;
 }
-form div{
+.loginform div{
     margin: 15px;
 }
-form input{
+.loginform input{
     width: 300px;
     padding: 10px;
     background-color: #fff;
@@ -244,7 +264,7 @@ form input{
     font-size: 15px;
     margin-top: 5px;
 }
-form .loginsub{
+.loginform .loginsub{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,7 +273,7 @@ form .loginsub{
     height: 100%;
     margin-top: 50px;
 }
-form #loginsubbtn{
+.loginform #loginsubbtn{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,17 +288,17 @@ form #loginsubbtn{
     cursor: pointer;
     transition: all 0.2s ease;
 }
-form #loginsubbtn:hover{
+.loginform #loginsubbtn:hover{
     background: transparent;
     border: 2px solid #00B588;
     color: #00B588;
 }
-form a{
+.loginform a{
     text-decoration: none;
     color: #00B588;
     font-size: 15px;
 }
-form a:hover{
+.loginform a:hover{
     color: #002D22;
     text-decoration: underline;
     cursor: pointer;
@@ -341,6 +361,73 @@ main .main-customer{
 main .main-customer .groups{
     display: flex;
 }
+.registermainpage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+.registerform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    padding: 30px 50px;
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border-radius: 35px;
+    background: #fff;
+    backdrop-filter: blur(20px);
+    gap: 10px;
+}
+.registerform input{
+    padding: 10px;
+    background-color: #fff;
+    color: #002D22;
+    border: 1px solid #002D22;
+    border-radius: 8px;
+    outline: none;
+    width: 300px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.registerform input[type="date"]{
+    background: #002D22;
+    color: #fff;
+}
+.registerform #signupbtn{
+    color: #fff;
+    background: #C6204C;
+    padding: 10px 20px;
+    border: 3px solid #C6204C;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.registerform #signupbtn:hover{
+    color: #C6204C;
+    background: #fff;
+}
+#registerloginbtn{
+    color: #00B588;
+}
+#registerloginbtn:hover{
+    color: #002D22;
+    text-decoration: underline;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.registermainpage #registertxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
 .marketmain{
     margin: 10%;
 }
@@ -358,7 +445,7 @@ main .main-customer .groups{
     transition: all 0.3s ease;
 }
 .marketmain .btn-link:hover{
-    border-bottom: 2px solid #002D22;
+    text-decoration: underline;
 }
 .marketmain ul{
     display: flex;
@@ -368,13 +455,14 @@ main .main-customer .groups{
     padding: 5px 10px;
 }
 .marketmain ul li a{
-    color: #002D22;
+    color: #C6204C;
     display: inline-block;
     padding: 3px 7px;
     border-radius: 20px;
+    transition: all 0.3s ease;
 }
 .marketmain ul li a:hover{
-    background:#002D22;
+    background:#C6204C;
     color: #fff;
 }
 .market-table{
@@ -544,14 +632,14 @@ main .main-customer .groups{
 }
 .main-third-page .text-part a{
     color: #fff;
-    background: #00B588;
+    background: #C6204C;
     transition: all 0.3s ease;
     padding: 10px 20px;
-    border: 3px solid #00B588;
+    border: 3px solid #C6204C;
     border-radius: 30px;
 }
 .main-third-page .text-part a:hover{
-    color: #00B588;
+    color: #C6204C;
     background: #fff;
 }
 footer{

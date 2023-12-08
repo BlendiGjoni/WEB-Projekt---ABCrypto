@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="shortcut icon" type="image/png" href="assets/ABCRYPTO Logo - Original - 5000x5000.png">
-    <title>Login ABCrypto</title>
+    <title>Sign Up - ABCrypto</title>
 </head>
 
 <body class="loginbody">
@@ -21,21 +21,45 @@
                 <li><a target="_blank" href="market.html">Market</a></li>
                 <li><a href="#">Buy Crypto</a></li>
             </ul>
-            <a href="login.html" class="loginbtn" id="login-loginbtn">Log In</a>
+            <a href="login.html" class="loginbtn">Log In</a>
         </nav>
     </header>
-    <main class="loginmain">
-        <form class="loginform" id="loginpop">
-            <div id="logintxt">Login</div>
-            <div class="username_email">Username: <input type="text" id="user"></div>
-            <p id="errorUser"></p>
-            <div class="password">Password: <input type="password"></div>
-            <p id="errorPass"></p>
-            <div class="loginsub"><button id="loginsubbtn">Login</button></div>
-            <div class="registerbtn"><a href="register.html" id="registerbtn">Register</a></div>
-        </form>
-        <div class="loginhero">
-            <img src="assets/babella.png" alt="" width="500px">
+    <main>
+        <div class="registermainpage">
+            <div class="registerimage">
+                <img src="assets/biro-bank-where-bitcoin-savings-are-kept-and-the-currency-grows-1.png" alt="" width="500px">
+            </div>
+            <form class="registerform">
+                <div id="registertxt">Sign Up</div>
+                <div>
+                    <label for="username"><b>Username: </b></label><br>
+                    <input type="text" placeholder="Enter Username" name="" id="username">
+                    <p id="usernameError"></p>
+                </div>
+                <div>
+                    <label for="email"><b>Email: </b></label><br>
+                    <input type="email" placeholder="Enter Email" name="" id="email">
+                    <p id="emailError"></p>
+                </div>
+                <div>
+                    <label for="password"><b>Password: </b></label><br>
+                    <input type="password" placeholder="Enter Password" name="" id="password">
+                    <p id="passwordError"></p>
+                </div>
+                <div>
+                    <label for="password"><b>Confirm Password:</b></label><br>
+                    <input type="password" placeholder="Confirm Password" name="" id="confirmpassword">
+                    <p id="confirmpasswordError"></p>
+                </div>
+                <div>
+                    <label for="date"><b>Date of Birth: </b></label><br>
+                    <input type="date" name="" id="date">
+                    <p id="dateError"></p>
+                </div>
+                <div class="clas"></div>
+                <div><button type="submit" id="signupbtn" onclick="validateForm()">Sign Up</button></div>
+                <div class="registerlogbtn">Already have an account? <a href="login.html" id="registerloginbtn">Log in</a></div>
+            </form>
         </div>
     </main>
     <footer id="footer">
@@ -89,6 +113,7 @@
         <h1>ABCrypto</h1>
         <p id="copyright">&copy; All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
