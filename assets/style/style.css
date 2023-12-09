@@ -1,3 +1,5 @@
+/* Kodi per style te pergjithshem te body */
+
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +14,12 @@ body{
     color: #002D22;
     font-family: 'Ubuntu', sans-serif;
 }
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+KODI PER STILIMIN E INDEX(home page) */
+
+/* Kodi per style te header (NAV) */
 header{
     width: 100%;
 }
@@ -69,6 +77,708 @@ header #menu-icon{
     cursor: pointer;
     display: none;
 }
+
+/* Kodi per main(first part) */
+main{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+main .main-first-page{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6%;
+}
+main .main-first-page .home{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+main .main-first-page #hero{
+    width: 40%;
+    align-content: center;
+    justify-content: center;
+}
+main .main-first-page #hero img{
+    width: 100%;
+}
+main .main-first-page #maintext{
+    font-size: 75px;
+}
+main .main-first-page #maintext span{
+    color: #24AB7A;
+}
+main .main-first-page #smalltext{
+    color:hsl(165, 100%, 9%);
+    font-size: 20px;
+    margin-top: 10px;
+}
+main .main-first-page .getstartedbtn a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-color: #FDA91D;
+    border: solid 3px #FDA91D;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+main .main-first-page .getstartedbtn a:hover{
+    background-color:#fff;
+    border: solid 3px #FDA91D;
+    color:#FDA91D;
+}
+
+/* Kodi per main info (second part)-------------------------------------------------*/
+main .main-customer{
+    display: flex;
+    justify-content: space-around;
+    margin: 10% 8% 10% 8%;
+}
+main .main-customer .groups{
+    display: flex;
+    gap: 10px   ;
+}
+main .main-customer .group-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: larger;
+}
+main .main-customer i{
+    font-size: 60px;
+    border: transparent;
+    padding: 10px;
+    border-radius: 100%;
+}
+main .main-customer #chart i{
+    color: #014231;
+    background-color: #00b5887e;
+}
+main .main-customer #usericon i{
+    color: #FDA91D;
+    background-color: #fdcc1d4b;
+}
+main .main-customer #world i{
+    color: #C6204C;
+    background-color: #c6204c40;
+}
+
+/* Kodi per main(third part)---------------------------------------*/
+.main-third-page{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.main-third-page .text-part{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.main-third-page .text-part i{
+    color: #00B588;
+}
+.main-third-page .text-part h1{
+    font-size: 60px;
+}
+.main-third-page .text-part span{
+    color: #00B588;
+}
+.main-third-page .text-part a{
+    color: #fff;
+    background: #C6204C;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border: 3px solid #C6204C;
+    border-radius: 30px;
+}
+.main-third-page .text-part a:hover{
+    color: #C6204C;
+    background: #fff;
+}
+
+/* Kodi per main slider -------------------------------------*/
+.product{
+    position: relative;
+    padding: 20px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    align-items: center;
+}
+.product-container{
+    margin: 0 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.product-container::-webkit-scrollbar{
+    display: none;
+}
+.product-card{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    color: #002D22;
+}
+.product-info{
+    display: flex;
+    align-items: center;
+}
+.productimg{
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px 0px 0px;
+    cursor: pointer;
+}
+.product-description{
+    padding-left: 20px;
+}
+.buy-trade-btn{
+    color: #002D22;
+    background-color: #00B588;
+    border: solid 3px #00B588; 
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.buy-trade-btn:hover{
+    background-color:#fff;
+    border: solid 3px #00B588;  
+}
+.nxt-btn,
+.pre-btn{
+    border: none;
+    width: 5vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #00B588 100%);
+    cursor: pointer;
+    z-index: 9;
+}
+.pre-btn{
+    left: 0;
+    font-size: 50px;
+    color: #fff;
+    transform: rotate(180deg);
+    opacity: 0.2;
+}
+.nxt-btn{
+    right: 0;
+    font-size: 50px;
+    color: #fff;
+    opacity: 0.2;
+}
+.pre-btn:hover,
+.nxt-btn:hover{
+    opacity: 0.7;
+}
+
+/* Kodi per pjesen main contact us  ------------------------------------------*/
+.main-contact-page{
+    display: flex;
+    flex-direction: column;
+    margin: 10% 10% 10% 10%;
+    gap: 10px;
+}
+.main-contact-page .contactlabel{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+.main-contact-page .contactlabel .contactlabeldiv{
+    width: 100%;
+}
+.main-contact-page .contactlabel .contactbuttondiv{
+    width: 20%;
+}
+.main-contact-page .contactlabel input{
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+}
+.main-contact-page .contactlabel #contact-sub{
+    background: #002D22;
+    color: #00B588;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.main-contact-page a{
+    color: #00B588;
+}
+.main-contact-page a:hover{
+    text-decoration: underline;
+}
+
+/* Kodi per footerin (first part) ----------------------------------------------*/
+footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: fit-content;
+    padding: 10px 10%;
+    width: 100%;
+    background-color: rgb(26, 26, 26);
+    color: #fff;
+}
+footer .footer-logo img{
+    width: 200px;
+    cursor: pointer;
+}
+.first-part-footer{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .socials ul{
+    display: flex;
+}
+footer p{
+    margin-top: 10px;
+}
+footer ul li {
+    list-style-type: none;
+    padding: 0px 10px;
+    font-size: 30px;
+}
+footer ul li i{
+    color: #00B588;
+    transition: all 0.2s;
+}
+footer ul li i:hover{
+    color: #fff;
+}
+
+/* Kodi per footerin(second part) ----------------------------------------------*/
+footer .second-part-footer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .second-part-footer div{
+    width: fit-content;
+    margin-top: 30px;
+}
+.second-part-footer p strong {
+    font-size: x-large;
+}
+.second-part-footer a{
+    text-decoration: none;
+    color: #6da588;
+    box-shadow: inset 0 0 0 0 #00B588;
+    padding: 3px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.second-part-footer a:hover{
+    box-shadow: inset 200px 0 0 0 #00B588;
+    color: white;
+}
+footer #copyright{
+    font-size: 10px;
+    color: grey;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////// */
+/* KODI PER MARKET */
+/* Main i faqes Market */
+.marketmain{
+    margin: 10%;
+}
+.marketmain .title-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.marketmain .btn-link{
+    position: relative;
+    min-width: max-content;
+}
+.marketmain .btn-link{
+    color: #002D22;
+    transition: all 0.3s ease;
+}
+.marketmain .btn-link:hover{
+    text-decoration: underline;
+}
+.marketmain ul{
+    display: flex;
+    margin-top: 20px;
+}
+.marketmain ul li{
+    padding: 5px 10px;
+}
+.marketmain ul li a{
+    color: #C6204C;
+    display: inline-block;
+    padding: 3px 7px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.marketmain ul li a:hover{
+    background:#C6204C;
+    color: #fff;
+}
+
+/* Kodi per tabelen e marketit ------------------------------------*/
+.market-table{
+    margin-top: 3%;
+    width: 100%;
+    border-collapse: collapse;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.table-heading,
+.table-data{
+    padding: 6px;
+}
+.table-heading{
+    text-align: left;
+}
+.market-table .table-head{
+    border-block-end: 3px solid #002D22;
+}
+.market-table .table-row{
+    border-block-end: 1px solid #002D22;
+    transition: all 0.3s ease;
+}
+.market-table .table-body .table-row:hover{
+    background-color: #00b58842;
+}
+.market-table .add-to-fav{
+    font-size: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #2e7966;
+}
+.market-table .wrapper{
+    display: flex;
+    align-items: center;
+    min-width: max-content;
+    gap: 5px;
+}
+.market-table .coin-name{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #002D22;
+    transition: all 0.3s ease;
+}
+.market-table .coin-name:hover{
+    color: #00B588;
+}
+.market-table .coin-name span{
+    color: #8c9e8f;
+    font-size: 13px;
+}
+.market-table .btn-trade{
+    background-color: #fff;
+    color: #002D22;
+    padding: 3px 8px;
+    border: 2px solid #002D22;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.market-table .table-body .table-row:hover .btn-trade{
+    background-color: #002D22;
+    color: #fff;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+KODI PER FAQEN BUY CRYPTO
+Pjesa main e faqes buy crypto */
+.buycrypto_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    gap: 50px;
+    text-align: center;
+}
+.buycrypto_main .buycrypto-text h1{
+    font-size: 80px;
+    margin-bottom: 2%;
+}
+.buycrypto_main .buycrypto-text p{
+    font-size: 30px;
+}
+.buycrypto_main .buycrypto-hero{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.buycrypto_main .buycrypto-hero img{
+    width: 500px;
+}
+.buycrypto_main .buycrypto-hero form .select-coin{
+    font-size: 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #002D22;
+    border: 1px solid #002D22;
+    padding: 10px 0px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+/* Kodi per formen e buy crypto --------------------------------*/
+.buycrypto_main form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    width: 450px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border-radius: 35px;
+    background: #fff;
+    backdrop-filter: blur(20px);
+
+}
+.buycrypto-form-text{
+    font-size: 20px;
+}
+.buycrypto_main .buycrypto-hero form input{
+    background-color: #fff;
+    color: #002D22;
+    border: 1px solid #002D22;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 240px;
+    padding: 14px 10px;
+    text-align: right;
+}
+.buycrypto_main form .select-currency{
+    padding: 13px 0px;
+    background-color: #fff;
+    color: #002D22;
+    border: 1px solid #002D22;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.buycrypto_form a{
+    text-decoration: none;
+    padding: 10px 110px;
+    color: #fff;
+    font-size: 15px;
+    background: #C6204C;
+    border: 3px solid #C6204C;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.buycrypto_main form a:hover{
+    color: #C6204C;
+    background: #fff;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////// 
+KODI PER FAQEN E LOGIN
+Pjesa e main */
+.loginbody{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#login-loginbtn{
+    display: none;
+}
+.loginmain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin: 150px 0px;
+}
+
+/* Kodi per login form ----------------------------------------------------- */
+.loginform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 500px;
+    padding: 60px 0px;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border-radius: 35px;
+    background: #fff;
+    backdrop-filter: blur(20px);
+}
+.loginform #logintxt{
+    font-size: 40px;
+}
+.loginform div{
+    margin: 15px;
+}
+.login-text-input{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.loginform input{
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #002D22;
+    border: 1px solid #002D22;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.loginform .loginsub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+.loginform #loginsubbtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    background: #00B588;
+    color: #fff;
+    font-size: 20px;
+    border: 3px solid;
+    border-radius: 20px;
+    border: 2px solid #00B588;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.loginform #loginsubbtn:hover{
+    background: transparent;
+    border: 2px solid #00B588;
+    color: #00B588;
+}
+.loginform a{
+    text-decoration: none;
+    color: #00B588;
+    font-size: 15px;
+}
+.loginform a:hover{
+    color: #002D22;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+KODI PER FAQEN REGISTER
+Pjesa e main */
+.registermainpage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+/* Kodi per register form --------------------------------------------- */
+.registerform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    padding: 30px 50px;
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border-radius: 35px;
+    background: #fff;
+    backdrop-filter: blur(20px);
+    gap: 10px;
+}
+.registerform input{
+    padding: 10px;
+    background-color: #fff;
+    color: #002D22;
+    border: 1px solid #002D22;
+    border-radius: 8px;
+    outline: none;
+    width: 300px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.registerform input[type="date"]{
+    background: #002D22;
+    color: #fff;
+}
+.registerform #signupbtn{
+    color: #fff;
+    background: #C6204C;
+    padding: 10px 20px;
+    border: 3px solid #C6204C;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.registerform #signupbtn:hover{
+    color: #C6204C;
+    background: #fff;
+}
+#registerloginbtn{
+    color: #00B588;
+}
+#registerloginbtn:hover{
+    color: #002D22;
+    text-decoration: underline;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.registermainpage #registertxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////
+KODI PER MEDIAT(ndryshimin e stilit per te bere krejt faqet responzive) */
 @media (max-width: 1350px){
     header nav{
         padding: 15px 4%;
@@ -183,12 +893,17 @@ header #menu-icon{
     .main-third-page img{
         width: 100%;
     }
+    .loginmain{
+        flex-direction: column;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        justify-content: space-between;
+    }
     .loginform{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
         margin-left: 0;
     }
     .registermainpage{
@@ -257,6 +972,12 @@ header #menu-icon{
     .marketmain{
         margin: 20% 5% !important;
     }
+    .loginform{
+        width: 90%;
+    }
+    .loginmain img{
+        width: 100%;
+    }
     .registermainpage {
         margin: 10% 5%;
     }
@@ -272,654 +993,4 @@ header #menu-icon{
     footer{
         width: 100%;
     }
-}
-.loginbody{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    /* background-image: url(assets/blob-scene-haikei.svg); */
-}
-#login-loginbtn{
-    display: none;
-}
-.loginmain{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-    margin: 150px 0px 150px 0px;
-}
-.loginform{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 450px;
-    height: 500px;
-    padding: 200px;
-    font-size: 20px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-    border-radius: 35px;
-    background: #fff;
-    backdrop-filter: blur(20px);
-}
-.loginform #logintxt{
-    font-size: 40px;
-}
-.loginform div{
-    margin: 15px;
-}
-.loginform input{
-    width: 300px;
-    padding: 10px;
-    background-color: #fff;
-    color: #002D22;
-    border: 1px solid #002D22;
-    border-radius: 8px;
-    outline: none;
-    font-size: 15px;
-    margin-top: 5px;
-}
-.loginform .loginsub{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    margin-top: 50px;
-}
-.loginform #loginsubbtn{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 30px;
-    background: #00B588;
-    color: #fff;
-    font-size: 20px;
-    border: 3px solid;
-    border-radius: 20px;
-    border: 2px solid #00B588;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-.loginform #loginsubbtn:hover{
-    background: transparent;
-    border: 2px solid #00B588;
-    color: #00B588;
-}
-.loginform a{
-    text-decoration: none;
-    color: #00B588;
-    font-size: 15px;
-}
-.loginform a:hover{
-    color: #002D22;
-    text-decoration: underline;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-main{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-main .main-first-page{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 6%;
-}
-main .main-first-page .home{
-    display: flex;
-    width: 40%;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-main .main-first-page #hero{
-    width: 40%;
-    align-content: center;
-    justify-content: center;
-}
-main .main-first-page #hero img{
-    width: 100%;
-}
-main .main-first-page #maintext{
-    font-size: 75px;
-}
-main .main-first-page #maintext span{
-    color: #24AB7A;
-}
-main .main-first-page #smalltext{
-    color:hsl(165, 100%, 9%);
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-main .main-first-page .getstartedbtn a{
-    text-decoration: none;
-    color: white;
-    display: inline-block;
-    background-color: #FDA91D;
-    border: solid 3px #FDA91D;
-    transition: all 0.3s ease;
-    border-radius: 20px;
-    padding: 10px 20px;
-}
-main .main-first-page .getstartedbtn a:hover{
-    background-color:#fff;
-    border: solid 3px #FDA91D;
-    color:#FDA91D;
-}
-main .main-customer{
-    display: flex;
-    justify-content: space-around;
-    margin: 10% 8% 10% 8%;
-}
-main .main-customer .groups{
-    display: flex;
-    gap: 10px   ;
-}
-main .main-customer .group-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    font-size: larger;
-}
-main .main-customer i{
-    font-size: 60px;
-    border: transparent;
-    padding: 10px;
-    border-radius: 100%;
-}
-main .main-customer #chart i{
-    color: #014231;
-    background-color: #00b5887e;
-}
-main .main-customer #usericon i{
-    color: #FDA91D;
-    background-color: #fdcc1d4b;
-}
-main .main-customer #world i{
-    color: #C6204C;
-    background-color: #c6204c40;
-}
-.registermainpage{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 6%;
-    margin-bottom: 6%;
-}
-.registerform{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 450px;
-    padding: 30px 50px;
-    font-size: 15px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-    border-radius: 35px;
-    background: #fff;
-    backdrop-filter: blur(20px);
-    gap: 10px;
-}
-.registerform input{
-    padding: 10px;
-    background-color: #fff;
-    color: #002D22;
-    border: 1px solid #002D22;
-    border-radius: 8px;
-    outline: none;
-    width: 300px;
-    font-size: 15px;
-    margin-top: 5px;
-}
-.registerform input[type="date"]{
-    background: #002D22;
-    color: #fff;
-}
-.registerform #signupbtn{
-    color: #fff;
-    background: #C6204C;
-    padding: 10px 20px;
-    border: 3px solid #C6204C;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.registerform #signupbtn:hover{
-    color: #C6204C;
-    background: #fff;
-}
-#registerloginbtn{
-    color: #00B588;
-}
-#registerloginbtn:hover{
-    color: #002D22;
-    text-decoration: underline;
-}
-::-webkit-calendar-picker-indicator{
-    background-color: #fff;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.registermainpage #registertxt{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-}
-.marketmain{
-    margin: 10%;
-}
-.marketmain .title-wrap{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.marketmain .btn-link{
-    position: relative;
-    min-width: max-content;
-}
-.marketmain .btn-link{
-    color: #002D22;
-    transition: all 0.3s ease;
-}
-.marketmain .btn-link:hover{
-    text-decoration: underline;
-}
-.marketmain ul{
-    display: flex;
-    margin-top: 20px;
-}
-.marketmain ul li{
-    padding: 5px 10px;
-}
-.marketmain ul li a{
-    color: #C6204C;
-    display: inline-block;
-    padding: 3px 7px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-.marketmain ul li a:hover{
-    background:#C6204C;
-    color: #fff;
-}
-.market-table{
-    margin-top: 3%;
-    width: 100%;
-    border-collapse: collapse;
-    overflow: auto;
-    scroll-behavior: smooth;
-}
-.table-heading,
-.table-data{
-    padding: 6px;
-}
-.table-heading{
-    text-align: left;
-}
-.market-table .table-head{
-    border-block-end: 3px solid #002D22;
-}
-.market-table .table-row{
-    border-block-end: 1px solid #002D22;
-    transition: all 0.3s ease;
-}
-.market-table .table-body .table-row:hover{
-    background-color: #00b58842;
-}
-.market-table .add-to-fav{
-    font-size: 15px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: #2e7966;
-}
-.market-table .wrapper{
-    display: flex;
-    align-items: center;
-    min-width: max-content;
-    gap: 5px;
-}
-.market-table .coin-name{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #002D22;
-    transition: all 0.3s ease;
-}
-.market-table .coin-name:hover{
-    color: #00B588;
-}
-.market-table .coin-name span{
-    color: #8c9e8f;
-    font-size: 13px;
-}
-.market-table .btn-trade{
-    background-color: #fff;
-    color: #002D22;
-    padding: 3px 8px;
-    border: 2px solid #002D22;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-.market-table .table-body .table-row:hover .btn-trade{
-    background-color: #002D22;
-    color: #fff;
-}
-.product{
-    position: relative;
-    padding: 20px;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    align-items: center;
-}
-.product-container{
-    margin: 0 50px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-}
-.product-container::-webkit-scrollbar{
-    display: none;
-}
-.product-card{
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    color: #002D22;
-}
-.product-info{
-    display: flex;
-    align-items: center;
-}
-.productimg{
-    width: 50px;
-    height: 50px;
-    margin: 0px 10px 0px 0px;
-    cursor: pointer;
-}
-.product-description{
-    padding-left: 20px;
-}
-.buy-trade-btn{
-    color: #002D22;
-    background-color: #00B588;
-    border: solid 3px #00B588; 
-    transition: all 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 20px;
-}
-.buy-trade-btn:hover{
-    background-color:#fff;
-    border: solid 3px #00B588;  
-}
-.nxt-btn,
-.pre-btn{
-    border: none;
-    width: 5vw;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center ;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #00B588 100%);
-    cursor: pointer;
-    z-index: 9;
-}
-.pre-btn{
-    left: 0;
-    font-size: 50px;
-    color: #fff;
-    transform: rotate(180deg);
-    opacity: 0.2;
-}
-.nxt-btn{
-    right: 0;
-    font-size: 50px;
-    color: #fff;
-    opacity: 0.2;
-}
-.pre-btn:hover,
-.nxt-btn:hover{
-    opacity: 0.7;
-}
-.main-third-page{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-.main-third-page .text-part{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-.main-third-page .text-part i{
-    color: #00B588;
-}
-.main-third-page .text-part h1{
-    font-size: 60px;
-}
-.main-third-page .text-part span{
-    color: #00B588;
-}
-.main-third-page .text-part a{
-    color: #fff;
-    background: #C6204C;
-    transition: all 0.3s ease;
-    padding: 10px 20px;
-    border: 3px solid #C6204C;
-    border-radius: 30px;
-}
-.main-third-page .text-part a:hover{
-    color: #C6204C;
-    background: #fff;
-}
-.buycrypto_main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    gap: 50px;
-    text-align: center;
-}
-.buycrypto_main .buycrypto-text h1{
-    font-size: 80px;
-    margin-bottom: 2%;
-}
-.buycrypto_main .buycrypto-text p{
-    font-size: 30px;
-}
-.buycrypto_main .buycrypto-hero{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-.buycrypto_main .buycrypto-hero img{
-    width: 500px;
-}
-.buycrypto_main .buycrypto-hero form .select-coin{
-    font-size: 20px;
-    text-align: center;
-    background-color: #fff;
-    color: #002D22;
-    border: 1px solid #002D22;
-    padding: 10px 0px;
-    width: 300px;
-    border-radius: 20px;
-}
-.buycrypto_main form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-    width: 450px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-    border-radius: 35px;
-    background: #fff;
-    backdrop-filter: blur(20px);
-
-}
-.buycrypto-form-text{
-    font-size: 20px;
-}
-.buycrypto_main .buycrypto-hero form input{
-    background-color: #fff;
-    color: #002D22;
-    border: 1px solid #002D22;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    width: 240px;
-    padding: 14px 10px;
-    text-align: right;
-}
-.buycrypto_main form .select-currency{
-    padding: 13px 0px;
-    background-color: #fff;
-    color: #002D22;
-    border: 1px solid #002D22;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-.buycrypto_form button{
-    padding: 10px 20px;
-    width: 300px;
-    color: #fff;
-    font-size: 20px;
-    background: #C6204C;
-    border: 3px solid #C6204C;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-.buycrypto_main form button:hover{
-    color: #C6204C;
-    background: #fff;
-}
-.main-contact-page{
-    display: flex;
-    flex-direction: column;
-    margin: 10% 10% 10% 10%;
-    gap: 10px;
-}
-.main-contact-page .contactlabel{
-    width: 100%;
-    display: flex;
-    gap: 5px;
-}
-.main-contact-page .contactlabel .contactlabeldiv{
-    width: 100%;
-}
-.main-contact-page .contactlabel .contactbuttondiv{
-    width: 20%;
-}
-.main-contact-page .contactlabel input{
-    width: 100%;
-    padding: 10px 0 10px 0;
-    border-radius: 10px;
-}
-.main-contact-page .contactlabel #contact-sub{
-    background: #002D22;
-    color: #00B588;
-    width: 100%;
-    padding: 10px 0 10px 0;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.main-contact-page a{
-    color: #00B588;
-}
-.main-contact-page a:hover{
-    text-decoration: underline;
-}
-footer{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    height: fit-content;
-    padding: 10px 10%;
-    width: 100%;
-    background-color: rgb(26, 26, 26);
-    color: #fff;
-}
-footer .footer-logo img{
-    width: 200px;
-    cursor: pointer;
-}
-.first-part-footer{
-    display: flex;
-    width: 100%;
-    margin-top: 30px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-footer .socials ul{
-    display: flex;
-}
-footer p{
-    margin-top: 10px;
-}
-footer ul li {
-    list-style-type: none;
-    padding: 0px 10px;
-    font-size: 30px;
-}
-footer ul li i{
-    color: #00B588;
-    transition: all 0.2s;
-}
-footer ul li i:hover{
-    color: #fff;
-}
-footer .second-part-footer{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-footer .second-part-footer div{
-    width: fit-content;
-    margin-top: 30px;
-}
-.second-part-footer p strong {
-    font-size: x-large;
-}
-.second-part-footer a{
-    text-decoration: none;
-    color: #6da588;
-    box-shadow: inset 0 0 0 0 #00B588;
-    padding: 3px;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-.second-part-footer a:hover{
-    box-shadow: inset 200px 0 0 0 #00B588;
-    color: white;
-}
-footer #copyright{
-    font-size: 10px;
-    color: grey;
 }
