@@ -26,33 +26,38 @@ productContainers.forEach((item, i) => {
 });
 ////////////////////////////////////////////////////////////////
 //Kodi per validimin e faqes Register
-function validateForm() {
-    let username = document.getElementById("username").value;
-    document.getElementById("usernameError").innerText = '';
-    let email = document.getElementById("email").value;
-    document.getElementById("emailError").innerText = '';
-    let password = document.getElementById("password").value;
-    document.getElementById("passwordError").innerText = '';
-    let confirmpassword = document.getElementById("confirmpassword").value;
-    document.getElementById("confirmpassword").innerText = '';
 
-    let usernameRegex = /^[a-zA-Z\-]+$/;
+let usernameRegex = /^[a-zA-Z\-]+$/;
+let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+function validateForm() {
+    let username = document.getElementById('username').value;
+    document.getElementById('usernameError').innerText = '';
+    let email = document.getElementById('email').value;
+    document.getElementById('emailError').innerText = '';
+    let password = document.getElementById('password').value;
+    document.getElementById('passwordError').innerText = '';
+    let confirmpassword = document.getElementById('confirmpassword').value;
+    document.getElementById('confirmpassword').innerText = '';
+
     if (!usernameRegex.test(username)) {
         document.getElementById("usernameError").innerText = 'Invalid Username';
         return;
     }
-    let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (!emailRegex.test(email)) {
         document.getElementById("emailError").innerText = 'Invalid Email';
         return;
     }
-    let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
     if (!passwordRegex.test(password)) {
         document.getElementById("passwordError").innerText = 'Invalid Password';
         return;
     }
-    if (!(confirmpassword==password)) {
-        document.getElementById("confirmpassword").innerText = 'Invalid Password';
-        return;
+    if(confirmpassword === '' || confirmpassword !== password){
+        alert("Passwords do not match");
+        confirmpassword.focus();
+        return false;
     }
+    alert("Registration submitted successfully");
 }
+///////////////////////////////////////////////////////////////
