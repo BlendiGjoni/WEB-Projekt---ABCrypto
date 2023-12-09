@@ -1,71 +1,75 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="shortcut icon" type="image/png" href="assets/ABCRYPTO Logo - Original - 5000x5000.png">
-    <title>Sign Up - ABCrypto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../images/logologo.png">
+    <title>Buy Crypto - ABCrypto</title>
 </head>
 
-<body class="loginbody">
+<body>
     <header>
         <nav>
-            <a href="#" class="navlogo">ABCrypto</a>
+            <a href="../../index.html" class="navlogo"><img src="../images/textlogo.png" width="200px" alt=""></a>
             <div class="bx bx-menu" id="menu-icon"></div>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../../index.html" id="current">Home</a></li>
                 <li><a href="#footer">About Us</a></li>
-                <li><a target="_blank" href="market.html">Market</a></li>
-                <li><a href="#">Buy Crypto</a></li>
+                <li><a href="market.html">Market</a></li>
+                <li><a href="buycrypto.html" id="current">Buy Crypto</a></li>
             </ul>
-            <a href="login.html" class="loginbtn">Log In</a>
+            <a target="_blank" href="login.html" class="loginbtn">Log In</a>
         </nav>
     </header>
-    <main>
-        <div class="registermainpage">
-            <div class="registerimage">
-                <img src="assets/biro-bank-where-bitcoin-savings-are-kept-and-the-currency-grows-1.png" alt="" width="500px">
-            </div>
-            <form class="registerform">
-                <div id="registertxt">Sign Up</div>
+    <main class="buycrypto_main">
+        <div class="buycrypto-text">
+            <h1>Buy Crypto quick, easy, simple.</h1>
+            <p>Buy and sell digital currencies, keep track of them in the one place.</p>
+        </div>
+        <div class="buycrypto-hero">
+            <img src="../images/simplistic-cryptocurrency-wallet-and-online-banking.png" alt="">
+            <form class="buycrypto_form">
                 <div>
-                    <label for="username"><b>Username: </b></label><br>
-                    <input type="text" placeholder="Enter Username" name="" id="username" required>
-                    <p id="usernameError"></p>
+                    <p class="buycrypto-form-text">Choose Coin:</p>
+                    <select class="select-coin">
+                        <option value="BTC">Bitcoin <span>(BTC)</span></option>
+                        <option value="ETH">Etherum <span>(ETH)</span></option>
+                        <option value="LTC">Litecoin <span>(LTC)</span></option>
+                        <option value="XRP">XRP <span>(XRP)</span></option>
+                        <option value="DOGE">Doge Coin <span>(DOGE)</span></option>
+                        <option value="DASH">Dash <span>(DASH)</span></option>
+                        <option value="ZEC">Zcash <span></span></option>
+                    </select>
                 </div>
                 <div>
-                    <label for="email"><b>Email: </b></label><br>
-                    <input type="email" placeholder="Enter Email" name="" id="email" required>
-                    <p id="emailError"></p>
+                    <p class="buycrypto-form-text">How much?</p>
+                    <p id="buycrypto_money">
+                        <input type="number" placeholder="Enter Amount">
+                        <select class="select-currency">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="AUD">AUD</option>
+                            <option value="CAD">CAD</option>
+                        </select>
+                    </p>
                 </div>
                 <div>
-                    <label for="password"><b>Password: </b></label><br>
-                    <input type="password" placeholder="Enter Password" name="" id="password" required>
-                    <p id="passwordError"></p>
+                    <button >Buy Now</button>
                 </div>
-                <div>
-                    <label for="password"><b>Confirm Password:</b></label><br>
-                    <input type="password" placeholder="Confirm Password" name="" id="confirmpassword" required>
-                    <p id="confirmpasswordError"></p>
-                </div>
-                <div>
-                    <label for="date"><b>Date of Birth: </b></label><br>
-                    <input type="date" name="" id="date" required>
-                    <p id="dateError"></p>
-                </div>
-                <div class="clas"></div>
-                <div><button type="submit" id="signupbtn" onclick="validateForm()">Sign Up</button></div>
-                <div class="registerlogbtn">Already have an account? <a href="login.html" id="registerloginbtn">Log in</a></div>
             </form>
         </div>
     </main>
     <footer id="footer">
         <div class="first-part-footer">
             <div class="footer-logo"><img src="" alt="">
-                <img src="assets/ABCRYPTO Logo - Original - 5000x5000.png" alt="">
+                <img src="../images/ABCRYPTO Logo - Original - 5000x5000.png" alt="">
             </div>
             <div class="socials">
                 <ul>
@@ -113,7 +117,6 @@
         <h1>ABCrypto</h1>
         <p id="copyright">&copy; All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="../script/script.js"></script>
 </body>
-
 </html>

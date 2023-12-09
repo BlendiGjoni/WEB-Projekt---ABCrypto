@@ -33,6 +33,7 @@ header nav{
 header .navlogo{
     color: #002D22;
     font-size: 20px;
+    align-items: center;
     cursor: pointer;
 }
 header nav ul{
@@ -145,9 +146,14 @@ header #menu-icon{
         gap: 30px;
     }
     .marketmain{
-        margin: 5% !important;
+        margin: 10% 5% !important;
+    }
+    .marketmain ul{
+        width: 100% !important;
+        flex-wrap: wrap;
     }
     .market-table{
+        display: block;
         width: 100% !important;
     }
     .product-container{
@@ -247,6 +253,9 @@ header #menu-icon{
         display: flex;
         flex-direction: column;
         gap: 30px;
+    }
+    .marketmain{
+        margin: 20% 5% !important;
     }
     .registermainpage {
         margin: 10% 5%;
@@ -408,10 +417,11 @@ main .main-first-page .getstartedbtn a:hover{
 main .main-customer{
     display: flex;
     justify-content: space-around;
-    margin: 5% 8% 5% 8%;
+    margin: 10% 8% 10% 8%;
 }
 main .main-customer .groups{
     display: flex;
+    gap: 10px   ;
 }
 main .main-customer .group-text{
     display: flex;
@@ -546,6 +556,8 @@ main .main-customer #world i{
     margin-top: 3%;
     width: 100%;
     border-collapse: collapse;
+    overflow: auto;
+    scroll-behavior: smooth;
 }
 .table-heading,
 .table-data{
@@ -607,8 +619,8 @@ main .main-customer #world i{
 .product{
     position: relative;
     padding: 20px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     align-items: center;
 }
 .product-container{
@@ -689,8 +701,8 @@ main .main-customer #world i{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 .main-third-page .text-part{
     width: 40%;
@@ -804,21 +816,29 @@ main .main-customer #world i{
 .main-contact-page{
     display: flex;
     flex-direction: column;
-    margin: 5% 10% 5% 10%;
+    margin: 10% 10% 10% 10%;
     gap: 10px;
 }
 .main-contact-page .contactlabel{
     width: 100%;
+    display: flex;
+    gap: 5px;
+}
+.main-contact-page .contactlabel .contactlabeldiv{
+    width: 100%;
+}
+.main-contact-page .contactlabel .contactbuttondiv{
+    width: 20%;
 }
 .main-contact-page .contactlabel input{
-    width: 79%;
+    width: 100%;
     padding: 10px 0 10px 0;
     border-radius: 10px;
 }
 .main-contact-page .contactlabel #contact-sub{
-    width: 20%;
     background: #002D22;
     color: #00B588;
+    width: 100%;
     padding: 10px 0 10px 0;
     border-radius: 10px;
     cursor: pointer;
