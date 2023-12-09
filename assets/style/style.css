@@ -286,29 +286,29 @@ main .main-customer #world i{
 }
 
 /* Kodi per pjesen main contact us  ------------------------------------------*/
-.main-contact-page{
+.main-subscribe-page{
     display: flex;
     flex-direction: column;
     margin: 10% 10% 10% 10%;
     gap: 10px;
 }
-.main-contact-page .contactlabel{
+.main-subscribe-page .subscribelabel{
     width: 100%;
     display: flex;
     gap: 5px;
 }
-.main-contact-page .contactlabel .contactlabeldiv{
+.main-subscribe-page .subscribelabel .subscribelabeldiv{
     width: 100%;
 }
-.main-contact-page .contactlabel .contactbuttondiv{
+.main-subscribe-page .subscribelabel .subscribebuttondiv{
     width: 20%;
 }
-.main-contact-page .contactlabel input{
+.main-subscribe-page .subscribelabel input{
     width: 100%;
     padding: 10px 0 10px 0;
     border-radius: 10px;
 }
-.main-contact-page .contactlabel #contact-sub{
+.main-subscribe-page .subscribelabel #subscribe-sub{
     background: #002D22;
     color: #00B588;
     width: 100%;
@@ -316,10 +316,10 @@ main .main-customer #world i{
     border-radius: 10px;
     cursor: pointer;
 }
-.main-contact-page a{
+.main-subscribe-page a{
     color: #00B588;
 }
-.main-contact-page a:hover{
+.main-subscribe-page a:hover{
     text-decoration: underline;
 }
 
@@ -802,7 +802,7 @@ KODI PER MEDIAT(ndryshimin e stilit per te bere krejt faqet responzive) */
     header nav ul a{
         color: #fff;
         padding: 1rem;
-        margin: 1rem;
+        margin: 10px;
         display: block;
     }
     header nav ul a:hover{
@@ -879,12 +879,12 @@ KODI PER MEDIAT(ndryshimin e stilit per te bere krejt faqet responzive) */
         width: 90%;
         margin: 0 5%;
     }
-    .main-contact-page{
+    .main-subscribe-page{
         width: 90%;
         margin: 5% !important;
         gap: 20px !important;
     }
-    .main-contact-page p{
+    .main-subscribe-page p{
         font-size: smaller !important;
     }
     .main-third-page .text-part{

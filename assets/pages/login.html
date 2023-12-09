@@ -33,15 +33,15 @@
     <main class="loginmain">
         <form class="loginform" id="loginpop">
             <div id="logintxt">Login</div>
-            <div class="login-text-input">Username: 
-                <input type="text" id="user">
+            <div class="login-text-input"><b>Username: </b>
+                <input type="text" placeholder="Enter your username" id="username" required>
             </div>
-            <p id="errorUser"></p>
-            <div class="login-text-input">Password: 
-                <input type="password">
+            <p id="usernameError"></p>
+            <div class="login-text-input"><b>Password: </b>
+                <input type="password" placeholder="Enter your password" id="password" required>
             </div>
-            <p id="errorPass"></p>
-            <div class="loginsub"><button id="loginsubbtn">Login</button></div>
+            <p id="passwordError"></p>
+            <div class="loginsub"><button type="submit" id="loginsubbtn" onclick="validateLogInForm()">Log in</button></div>
             <div class="registerbtn"><a href="register.html" id="registerbtn">Register</a></div>
         </form>
         <div class="loginhero">

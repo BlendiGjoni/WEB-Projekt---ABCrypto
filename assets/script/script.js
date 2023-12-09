@@ -31,7 +31,7 @@ let usernameRegex = /^[a-zA-Z\-]+$/;
 let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-function validateForm() {
+function validateRegisterForm() {
     let username = document.getElementById('username').value;
     document.getElementById('usernameError').innerText = '';
     let email = document.getElementById('email').value;
@@ -61,3 +61,23 @@ function validateForm() {
     alert("Registration submitted successfully");
 }
 ///////////////////////////////////////////////////////////////
+//Kodi per validimin e faqes Log in
+
+function validateLogInForm(){
+    let username = document.getElementById('username').value;
+    document.getElementById("usernameError").innerText = '';
+    let password = document.getElementById('password').value;
+    document.getElementById("passwordError").innerText = '';
+
+    if(!usernameRegex.test(username)) {
+        document.getElementById("usernameError").innerText = 'Invalid username';
+        return;
+    }
+    if(!passwordRegex.test(password)) {
+        document.getElementById("passwordError").innerText = 'Invalid password';
+        return;
+    }
+
+    alert("Logged in successfully"); 
+}
+////////////////////////////////////////////////////////////////
