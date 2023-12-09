@@ -110,30 +110,37 @@ header #menu-icon{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 100%;
-        margin-top: 100px;
+        width: 90%;
+        margin-top: 70px !important;
         margin-left: 5%;
     }
     main .main-first-page .home{
         width: 100% !important;
+        gap: 30px;
     }
     main .main-first-page #maintext{
-        text-align: center;
+        text-align: left;
         width: 100%;
         font-size: 60px;
     }
+    main .main-first-page #smalltext{
+        font-size: 10px;
+        width: 80%;
+    }
     main .main-first-page #hero{
         display: flex;
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
     }
     main .main-first-page #hero img{
-        width: 500px !important;
-        justify-content: center;
+        width: 90%;
     }
     main .main-customer {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 100%;
+        width: 90%;
         margin: 5% !important;
         gap: 30px;
     }
@@ -153,7 +160,7 @@ header #menu-icon{
     .main-third-page{
         flex-direction: column;
         align-items: flex-start;
-        width: 100%;
+        width: 90%;
         margin: 0 5%;
     }
     .main-contact-page{
@@ -166,6 +173,9 @@ header #menu-icon{
     }
     .main-third-page .text-part{
         width: 100% !important;
+    }
+    .main-third-page img{
+        width: 100%;
     }
     .loginform{
         display: flex;
@@ -205,6 +215,11 @@ header #menu-icon{
     .buycrypto_main .buycrypto-hero img{
         width: 90% !important;
     }
+    footer .first-part-footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 @media(max-width: 500px){
     body{
@@ -224,17 +239,9 @@ header #menu-icon{
         margin-top: 9%;
     }
     main .main-first-page #smalltext{
-        font-size: 20px !important;
+        font-size: 15px;
         width: 100%;
         margin-bottom: 20px;
-    }
-    main.main-first-page #hero{
-        display: flex;
-        flex-direction: column;
-    }
-    main .main-first-page #hero img{
-        width: 300px!important;
-        justify-content: center;
     }
     main .main-customer {
         display: flex;
@@ -366,19 +373,20 @@ main .main-first-page .home{
 main .main-first-page #hero{
     width: 40%;
     align-content: center;
+    justify-content: center;
 }
 main .main-first-page #hero img{
     width: 100%;
 }
 main .main-first-page #maintext{
-    font-size: 95px;
+    font-size: 75px;
 }
 main .main-first-page #maintext span{
     color: #24AB7A;
 }
 main .main-first-page #smalltext{
-    color:#002D22;
-    font-size: 25px;
+    color:hsl(165, 100%, 9%);
+    font-size: 20px;
     margin-top: 10px;
 }
 
@@ -748,7 +756,8 @@ main .main-customer #world i{
 .buycrypto_main form{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
     width: 450px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     border-radius: 35px;
