@@ -1,3 +1,61 @@
+<?php
+    $usernameError = "";
+    $emailError = "";
+    $passwordError = "";
+    $cpasswordError = "";
+    $dateError = "";
+    if(isset($_POST['submit'])){
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $cpassword = $_POST['cpassword'];
+        $date = $_POST['date'];
+
+        if(empty($username)){
+            $usernameError = "<br/>Username is required!";
+        }
+        else{
+            $username = trim($username);
+            $username = htmlspecialchars($username);
+            if(!preg_match('/^[a-zA-Z\-]+$/', $username)){
+                $usernameError = "<br/>Username should contain only letters and one symbol(-)!";
+            }
+        }
+
+        if(empty($email)){
+            $emailError = "<br/>Email is required!";
+        }
+        else{
+            $email = trim($email);
+            $email = htmlspecialchars($email);
+            if(!preg_match('/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/', $email)){
+                $emailEror = "<br/>Email is invalid!";
+            }
+        }
+        
+        if(empty($password)){
+            $passwordError = "<br/>Password is required!";
+        }
+        else{
+            if(strlen($password) < 8){
+                $passwordError = "<br/>Password must be at least 8 characters!";
+            }else if (!preg_match('/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/', $password)){
+                $passwordError = "<br/>Password should contain only letters(case insensitive) and numbers!";
+            }
+        }
+
+        if(empty($cpassword)){
+            $cpasswordError = "<br/>Confirm password is required!";
+        }
+        else if(!($cpassword == $password)){
+            $cpasswordError = "<br/>Passwords must match!";
+        }
+
+        if(empty($date)){
+            $dateError = "<br/>Date is required!";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,15 +73,15 @@
     <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
     <header>
         <nav>
-            <a href="../../index.html" class="navlogo"><img src="../images/textlogo.png" width="200px" alt=""></a>
+            <a href="../../index.php" class="navlogo"><img src="../images/textlogo.png" width="200px" alt=""></a>
             <div class="bx bx-menu" id="menu-icon"></div>
             <ul>
-                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.php">Home</a></li>
                 <li><a href="#footer">About Us</a></li>
-                <li><a target="_blank" href="market.html">Market</a></li>
-                <li><a target="_blank" href="buycrypto.html">Buy Crypto</a></li>
+                <li><a target="_blank" href="market.php">Market</a></li>
+                <li><a target="_blank" href="buycrypto.php">Buy Crypto</a></li>
             </ul>
-            <a href="login.html" class="loginbtn">Log In</a>
+            <a href="login.php" class="loginbtn">Log In</a>
         </nav>
     </header>
 
@@ -34,36 +92,37 @@
             <div class="registerimage">
                 <img src="../images//biro-bank-where-bitcoin-savings-are-kept-and-the-currency-grows-1.png" alt="" width="500px">
             </div>
-            <form class="registerform">
+            <form class="registerform" method="post">
                 <div id="registertxt">Sign Up</div>
                 <div>
                     <label for="username"><b>Username: </b></label><br>
-                    <input type="text" placeholder="Enter Username" name="" id="username" required>
-                    <p id="usernameError"></p>
+                    <input type="text" placeholder="Enter Username" name="username" id="username" >
+                    <span style="font-size: 15px; color: red;"><?php echo $usernameError ?></span>
                 </div>
                 <div>
                     <label for="email"><b>Email: </b></label><br>
-                    <input type="email" placeholder="Enter Email" name="" id="email" required>
-                    <p id="emailError"></p>
+                    <input type="email" placeholder="Enter Email" name="email" id="email" >
+                    <span style="font-size: 15px; color: red;"><?php echo $emailError ?></span>
                 </div>
                 <div>
                     <label for="password"><b>Password: </b></label><br>
-                    <input type="password" placeholder="Enter Password" name="" id="password" required>
-                    <p id="passwordError"></p>
+                    <input type="password" placeholder="Enter Password" name="password" id="password" >
+                    <span style="font-size: 15px; color: red;"><?php echo $passwordError ?></span>
                 </div>
                 <div>
                     <label for="password"><b>Confirm Password:</b></label><br>
-                    <input type="password" placeholder="Confirm Password" name="" id="confirmpassword" required>
-                    <p id="confirmpasswordError"></p>
+                    <input type="password" placeholder="Confirm Password" name="cpassword" id="confirmpassword" >
+                    <span style="font-size: 15px; color: red;"><?php echo $cpasswordError ?></span>
                 </div>
                 <div>
                     <label for="date"><b>Date of Birth: </b></label><br>
-                    <input type="date" name="" id="date" required>
-                    <p id="dateError"></p>
+                    <input type="date" name="date" id="date" >
+                    <span style="font-size: 15px; color: red;"><?php echo $dateError ?></span>
                 </div>
-                <div class="clas"></div>
-                <div><button type="submit" id="signupbtn" onclick="validateRegisterForm()">Sign Up</button></div>
-                <div class="registerlogbtn">Already have an account? <a href="login.html" id="registerloginbtn">Log in</a></div>
+                <div class="">
+                </div>
+                <div><button type="submit" name="submit" id="signupbtn" onclick="validateRegisterForm()">Sign Up</button></div>
+                <div class="registerlogbtn">Already have an account? <a href="login.php" id="registerloginbtn">Log in</a></div>
             </form>
         </div>
     </main>

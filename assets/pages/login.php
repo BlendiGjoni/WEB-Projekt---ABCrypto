@@ -1,78 +1,86 @@
-    <!DOCTYPE html>
+<?php
+    $usernameError = "";
+    $passwordError = "";
+    if(isset($_POST['submit'])){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        if(empty($username)){
+            $usernameError = "Username is required!";
+        }
+        else{
+            $username = trim($username);
+            $username = htmlspecialchars($username);
+            if(!preg_match('/^[a-zA-Z\-]+$/', $username)){
+                $usernameError = "Username should contain only letters and one symbol(-)!";
+            }
+        }
+
+        if(empty($password)){
+            $passwordError = "Password is required!";
+        }
+        else{
+            if(strlen($password) < 8){
+                $passwordError = "Password must be at least 8 characters!";
+            }else if (!preg_match('/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/', $password)){
+                $passwordError = "Password should contain only letters(case insensitive) and numbers!";
+            }
+        }
+
+    }
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="../images/logologo.png">
-    <title>Buy Crypto - ABCrypto</title>
+    <title>Log in - ABCrypto</title>
 </head>
 
-<body>
+<body class="loginbody">
 
-    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////
-    Kodi header njesoj -->
+    <!-- //////////////////////////////////////////////////////////
+    //Kodi per header, njesoj si index dhe faqet tjera. -->
     <header>
         <nav>
-            <a href="../../index.html" class="navlogo"><img src="../images/textlogo.png" width="200px" alt=""></a>
+            <a href="../../index.php" class="navlogo"><img src="../images/textlogo.png" width="200px" alt=""></a>
             <div class="bx bx-menu" id="menu-icon"></div>
             <ul>
-                <li><a href="../../index.html" id="current">Home</a></li>
+                <li><a href="../../index.php">Home</a></li>
                 <li><a href="#footer">About Us</a></li>
-                <li><a href="market.html">Market</a></li>
-                <li><a href="buycrypto.html" id="current">Buy Crypto</a></li>
+                <li><a target="_blank" href="market.php">Market</a></li>
+                <li><a target="_blank" href="buycrypto.php">Buy Crypto</a></li>
             </ul>
-            <a target="_blank" href="login.html" class="loginbtn">Log In</a>
+            <a href="login.php" class="loginbtn" id="login-loginbtn">Log In</a>
         </nav>
     </header>
 
-    <!-- Kodi per pjesen e main te buy crypto -->
-    <main class="buycrypto_main">
-        <div class="buycrypto-text">
-            <h1>Buy Crypto quick, easy, simple.</h1>
-            <p>Buy and sell digital currencies, keep track of them in the one place.</p>
-        </div>
-        <div class="buycrypto-hero">
-            <img src="../images/simplistic-cryptocurrency-wallet-and-online-banking.png" alt="">
-            <form class="buycrypto_form">
-                <div>
-                    <p class="buycrypto-form-text">Choose Coin:</p>
-                    <select class="select-coin">
-                        <option value="BTC">Bitcoin <span>(BTC)</span></option>
-                        <option value="ETH">Etherum <span>(ETH)</span></option>
-                        <option value="LTC">Litecoin <span>(LTC)</span></option>
-                        <option value="XRP">XRP <span>(XRP)</span></option>
-                        <option value="DOGE">Doge Coin <span>(DOGE)</span></option>
-                        <option value="DASH">Dash <span>(DASH)</span></option>
-                        <option value="ZEC">Zcash <span></span></option>
-                    </select>
-                </div>
-                <div>
-                    <p class="buycrypto-form-text">How much?</p>
-                    <p id="buycrypto_money">
-                        <input type="number" placeholder="Enter Amount">
-                        <select class="select-currency">
-                            <option value="USD">USD</option>
-                            <option value="EUR">EUR</option>
-                            <option value="GBP">GBP</option>
-                            <option value="AUD">AUD</option>
-                            <option value="CAD">CAD</option>
-                        </select>
-                    </p>
-                </div>
-                <div>
-                    <a href="login.html">Buy Now</a>
-                </div>
-            </form>
+    <!-- ////////////////////////////////////////////////////////////////
+    //Kodi per main te login. Forma dhe foto. -->
+    <main class="loginmain">
+        <form class="loginform" id="loginpop" method="post" action="">
+            <div id="logintxt">Login</div>
+            <div class="login-text-input"><b>Username: </b>
+                <input type="text" placeholder="Enter your username" id="username" name="username">
+            </div>
+            <span style="font-size: 15px; color: red;"><?php echo $usernameError ?></span>
+            <div class="login-text-input"><b>Password: </b>
+                <input type="password" placeholder="Enter your password" id="password" name="password">
+            </div>
+            <span style="font-size: 15px; color: red;"><?php echo $passwordError ?></span>
+            <div class="loginsub"><button type="submit" id="loginsubbtn" name="submit" onclick="validateLogInForm()">Log in</button></div>
+            <div class="registerbtn"><a href="register.php" id="registerbtn">Register</a></div>
+        </form>
+        <div class="loginhero">
+            <img src="../images/babella.png" alt="" width="500px">
         </div>
     </main>
-
-    <!-- Footeri njesoj  -->
+    <!-- //////////////////////////////////////////////////////////
+    //Kodi per footer, njesoj. -->
     <footer id="footer">
         <div class="first-part-footer">
             <div class="footer-logo"><img src="" alt="">
@@ -126,4 +134,5 @@
     </footer>
     <script src="../script/script.js"></script>
 </body>
+
 </html>

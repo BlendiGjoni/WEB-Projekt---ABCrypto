@@ -1,56 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="../images/logologo.png">
-    <title>Log in - ABCrypto</title>
+    <title>Buy Crypto - ABCrypto</title>
 </head>
 
-<body class="loginbody">
+<body>
 
-    <!-- //////////////////////////////////////////////////////////
-    //Kodi per header, njesoj si index dhe faqet tjera. -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Kodi header njesoj -->
     <header>
         <nav>
-            <a href="../../index.html" class="navlogo"><img src="../images/textlogo.png" width="200px" alt=""></a>
+            <a href="../../index.php" class="navlogo"><img src="../images/textlogo.png" width="200px" alt=""></a>
             <div class="bx bx-menu" id="menu-icon"></div>
             <ul>
-                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.php" id="current">Home</a></li>
                 <li><a href="#footer">About Us</a></li>
-                <li><a target="_blank" href="market.html">Market</a></li>
-                <li><a target="_blank" href="buycrypto.html">Buy Crypto</a></li>
+                <li><a href="market.php">Market</a></li>
+                <li><a href="buycrypto.php" id="current">Buy Crypto</a></li>
             </ul>
-            <a href="login.html" class="loginbtn" id="login-loginbtn">Log In</a>
+            <a target="_blank" href="login.php" class="loginbtn">Log In</a>
         </nav>
     </header>
 
-    <!-- ////////////////////////////////////////////////////////////////
-    //Kodi per main te login. Forma dhe foto. -->
-    <main class="loginmain">
-        <form class="loginform" id="loginpop">
-            <div id="logintxt">Login</div>
-            <div class="login-text-input"><b>Username: </b>
-                <input type="text" placeholder="Enter your username" id="username" required>
-            </div>
-            <p id="usernameError"></p>
-            <div class="login-text-input"><b>Password: </b>
-                <input type="password" placeholder="Enter your password" id="password" required>
-            </div>
-            <p id="passwordError"></p>
-            <div class="loginsub"><button type="submit" id="loginsubbtn" onclick="validateLogInForm()">Log in</button></div>
-            <div class="registerbtn"><a href="register.html" id="registerbtn">Register</a></div>
-        </form>
-        <div class="loginhero">
-            <img src="../images/babella.png" alt="" width="500px">
+    <!-- Kodi per pjesen e main te buy crypto -->
+    <main class="buycrypto_main">
+        <div class="buycrypto-text">
+            <h1>Buy Crypto quick, easy, simple.</h1>
+            <p>Buy and sell digital currencies, keep track of them in the one place.</p>
+        </div>
+        <div class="buycrypto-hero">
+            <img src="../images/simplistic-cryptocurrency-wallet-and-online-banking.png" alt="">
+            <form class="buycrypto_form">
+                <div>
+                    <p class="buycrypto-form-text">Choose Coin:</p>
+                    <select class="select-coin">
+                        <option value="BTC">Bitcoin <span>(BTC)</span></option>
+                        <option value="ETH">Etherum <span>(ETH)</span></option>
+                        <option value="LTC">Litecoin <span>(LTC)</span></option>
+                        <option value="XRP">XRP <span>(XRP)</span></option>
+                        <option value="DOGE">Doge Coin <span>(DOGE)</span></option>
+                        <option value="DASH">Dash <span>(DASH)</span></option>
+                        <option value="ZEC">Zcash <span></span></option>
+                    </select>
+                </div>
+                <div>
+                    <p class="buycrypto-form-text">How much?</p>
+                    <p id="buycrypto_money">
+                        <input type="number" placeholder="Enter Amount">
+                        <select class="select-currency">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="AUD">AUD</option>
+                            <option value="CAD">CAD</option>
+                        </select>
+                    </p>
+                </div>
+                <div>
+                    <a href="login.php">Buy Now</a>
+                </div>
+            </form>
         </div>
     </main>
 
-    <!-- //////////////////////////////////////////////////////////
-    //Kodi per footer, njesoj. -->
+    <!-- Footeri njesoj  -->
     <footer id="footer">
         <div class="first-part-footer">
             <div class="footer-logo"><img src="" alt="">
@@ -104,5 +126,4 @@
     </footer>
     <script src="../script/script.js"></script>
 </body>
-
 </html>

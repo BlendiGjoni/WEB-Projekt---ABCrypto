@@ -18,15 +18,15 @@
     //Kodi per header njesoj. -->
     <header>
         <nav>
-            <a href="../../index.html" class="navlogo"><img src="../images/textlogo.png   " width="200px" alt=""></a>
+            <a href="../../index.php" class="navlogo"><img src="../images/textlogo.png   " width="200px" alt=""></a>
             <div class="bx bx-menu" id="menu-icon"></div>
             <ul>
-                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.php">Home</a></li>
                 <li><a href="#footer">About Us</a></li>
-                <li><a href="market.html" id="current">Market</a></li>
-                <li><a href="buycrypto.html">Buy Crypto</a></li>
+                <li><a href="market.php" id="current">Market</a></li>
+                <li><a href="buycrypto.php">Buy Crypto</a></li>
             </ul>
-            <a target="_blank" href="login.html" class="loginbtn">Log In</a>
+            <a target="_blank" href="login.php" class="loginbtn">Log In</a>
         </nav>
     </header>
 

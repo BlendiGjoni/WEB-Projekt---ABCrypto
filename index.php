@@ -19,15 +19,15 @@
     //Kodi per header (NAV bar). -->
     <header>
         <nav>
-            <a href="index.html" class="navlogo"><img src="assets/images/textlogo.png" width="200px" alt=""></a>
+            <a href="index.php" class="navlogo"><img src="assets/images/textlogo.png" width="200px" alt=""></a>
             <div class="bx bx-menu" id="menu-icon"></div>
             <ul>
-                <li><a href="index.html" id="current">Home</a></li>
+                <li><a href="index.php" id="current">Home</a></li>
                 <li><a href="#footer">About Us</a></li>
-                <li><a target="_blank" href="assets/pages/market.html">Market</a></li>
-                <li><a target="_blank" href="assets/pages/buycrypto.html">Buy Crypto</a></li>
+                <li><a target="_blank" href="assets/pages/market.php">Market</a></li>
+                <li><a target="_blank" href="assets/pages/buycrypto.php">Buy Crypto</a></li>
             </ul>
-            <a target="_blank" href="assets/pages/login.html" class="loginbtn">Log In</a>
+            <a target="_blank" href="assets/pages/login.php" class="loginbtn">Log In</a>
         </nav>
     </header>
     <!-- ////////////////////////////////////////////////////////////////
@@ -42,7 +42,7 @@
                 <div id="smalltext">
                     <p>Biggest, easiest, safest and fastest cryptocurrency exchange online. Experience unparalleled security and lightning-fast transactions for all your crypto needs.</p>
                 </div>
-                <div class="getstartedbtn"><a href="assets/pages/login.html">Get Started Now</a></div>
+                <div class="getstartedbtn"><a href="assets/pages/login.php">Get Started Now</a></div>
             </div>
             <div id="hero"><img src="assets/images/colors-crypto-banking-and-cryptocurrency-wallet.gif" alt=""></div>
         </div>
@@ -92,7 +92,7 @@
                     <h3><i class='bx bxs-check-circle'></i>     Buy and sell BTC, ETH, XRP, OKB, Etc...</h3>
                     <p>Buy and selll popular digital currencies, keep track of them in the one place.</p>
                 </div>
-                <div><a href="assets/pages/login.html">Explore More</a></div>
+                <div><a href="assets/pages/login.php">Explore More</a></div>
             </div>
         </div>
 
