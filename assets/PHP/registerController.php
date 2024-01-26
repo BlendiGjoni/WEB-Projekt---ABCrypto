@@ -9,7 +9,7 @@
         $cpassword = $_POST['cpassword'];
         $dateOfBirth = $_POST['dateOfBirth'];
 
-        $user = new User($id, $username, $email, $password, $dateOfBirth);
+        $user = new User($username, $email, $password, $dateOfBirth);
         $userRepository = new userRepository();
 
         $userRepository->insertUser($user);

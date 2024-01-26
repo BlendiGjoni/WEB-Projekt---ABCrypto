@@ -9,7 +9,7 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
         $cpassword = $_POST['cpassword'];
-        $date = $_POST['date'];
+        $dateOfBirth = $_POST['dateOfBirth'];
 
         if(empty($username)){
             $usernameError = "<br/>Username is required!";
@@ -109,7 +109,7 @@
                 </div>
                 <div>
                     <label for="date"><b>Date of Birth: </b></label><br>
-                    <input type="date" name="date" id="date" >
+                    <input type="date" name="dateOfBirth" id="date" >
                     <span style="font-size: 15px; color: red;"><?php echo $dateError ?></span>
                 </div>
                 <div class="">

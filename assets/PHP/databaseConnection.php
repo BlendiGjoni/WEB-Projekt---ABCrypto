@@ -21,7 +21,8 @@
         
         
             function startConnection(){
-        
+                echo "Server: $this->server, Database: $this->database, Username: $this->username, Password: $this->password";
+
                 try{
                     $conn = new PDO("mysql:host=$this->server;dbname=$this->database",$this->username,$this->password);
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

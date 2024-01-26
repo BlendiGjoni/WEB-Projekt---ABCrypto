@@ -5,7 +5,7 @@ class userRepository{
     private $connection;
     
     function __construct(){
-        $conn = new databaseConnection;
+        $conn = new databaseConnection();
         $this->connection = $conn->startConnection();
     }
 
@@ -19,13 +19,21 @@ class userRepository{
         $password = $user->getPassword();
         $dateOfBirth = $user->getDateOfBirth();
 
-        $sql = "INSERT INTO user (id, username, email, password, dateOfBirth, userType) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO user (username, email, password, date_of_Birth) VALUES (?, ?, ?, ?)";
+
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$id, $username, $email, $password, $dateOfBirth]);
+        $statement->execute([$username, $email, $password, $dateOfBirth]);
 
-        echo '<script> alert("User has been inserted succesfully!");</script>'
+        echo '<script> alert("User has been inserted succesfully!");</script>';
+
+        // try {
+        //     $statement->execute([$username, $email, $password, $dateOfBirth]);
+        //     echo '<script>alert("User has been inserted successfully!");</script>';
+        // } catch (PDOException $e) {
+        //     echo "Error: " . $e->getMessage();
+        // }
 
     }
 

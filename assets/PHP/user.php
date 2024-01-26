@@ -7,13 +7,11 @@
         private $dateOfBirth;
         private $userType;
 
-        function __construct($id, $username, $email, $password, $dateOfBirth, $userType){
-            $this->id = $id;
+        function __construct($username, $email, $password, $dateOfBirth){
             $this->username = $username;
             $this->email = $email;
             $this->password = $password;
             $this->dateOfBirth = $dateOfBirth;
-            $this->userType = $userType;
         }
 
         function getId(){
