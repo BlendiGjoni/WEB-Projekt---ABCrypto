@@ -25,13 +25,6 @@
         if(empty($email)){
             $emailError = "<br/>Email is required!";
         }
-        else{
-            $email = trim($email);
-            $email = htmlspecialchars($email);
-            if(!preg_match('/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/', $email)){
-                $emailEror = "<br/>Email is invalid!";
-            }
-        }
         
         if(empty($password)){
             $passwordError = "<br/>Password is required!";
@@ -92,7 +85,7 @@
             <div class="registerimage">
                 <img src="../images//biro-bank-where-bitcoin-savings-are-kept-and-the-currency-grows-1.png" alt="" width="500px">
             </div>
-            <form class="registerform" method="post">
+            <form class="registerform" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                 <div id="registertxt">Sign Up</div>
                 <div>
                     <label for="username"><b>Username: </b></label><br>
@@ -180,6 +173,7 @@
         <p id="copyright">&copy; All rights reserved.</p>
     </footer>
     <script src="../script/script.js"></script>
+    <?php include_once '../PHP/registerController.php'; ?>
 </body>
 
 </html>

@@ -19,11 +19,11 @@ class userRepository{
         $password = $user->getPassword();
         $dateOfBirth = $user->getDateOfBirth();
 
-        $sql = "INSERT INTO user (username, email, password, dateOfBirth) VALUES ('$username', '$email', '$password', '$dateOfBirth')";
+        $sql = "INSERT INTO user (id, username, email, password, dateOfBirth, userType) VALUES (?, ?, ?, ?, ?)";
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$username, $email, $password, $dateOfBirth]);
+        $statement->execute([$id, $username, $email, $password, $dateOfBirth]);
 
         echo '<script> alert("User has been inserted succesfully!");</script>'
 
