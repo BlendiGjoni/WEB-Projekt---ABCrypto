@@ -28,7 +28,7 @@
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     return $conn;
                 }catch(PDOException $e){
-                    echo "Database Conenction Failed".$e->getMessage();
+                    echo "Database Connection Failed".$e->getMessage();
                     return null;
                 }
         

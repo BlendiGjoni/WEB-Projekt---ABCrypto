@@ -4,14 +4,14 @@
         private $username;
         private $email;
         private $password;
-        private $dateOfBirth;
+        private $dateofbirth;
         private $userType;
 
-        function __construct($username, $email, $password, $dateOfBirth){
+        function __construct($username, $email, $password, $dateofbirth){
             $this->username = $username;
             $this->email = $email;
             $this->password = $password;
-            $this->dateOfBirth = $dateOfBirth;
+            $this->dateofbirth = $dateofbirth;
         }
 
         function getId(){
@@ -30,8 +30,8 @@
             return $this->password;
         }
 
-        function getDateOfBirth(){
-            return $this->dateOfBirth;
+        function getDateofbirth(){
+            return $this->dateofbirth;
         }
 
         function getUserType(){

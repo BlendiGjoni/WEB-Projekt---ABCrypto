@@ -1,33 +1,57 @@
 <?php
+include '../PHP/databaseConnection.php';
+
+session_start();
+    
     $usernameError = "";
     $passwordError = "";
-    if(isset($_POST['submit'])){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-        if(empty($username)){
-            $usernameError = "Username is required!";
-        }
-        else{
-            $username = trim($username);
-            $username = htmlspecialchars($username);
-            if(!preg_match('/^[a-zA-Z\-]+$/', $username)){
-                $usernameError = "Username should contain only letters and one symbol(-)!";
+        try{
+            $db = new databaseConnection();
+            $db->startConnection();
+            if(isset($_POST['login'])){
+                $username = $_POST['username'];
+                $password = $_POST['password'];
+        
+                if(empty($username)){
+                    $usernameError = "Username is required!";
+                }
+                else{
+                    $username = trim($username);
+                    $username = htmlspecialchars($username);
+                    if(!preg_match('/^[a-zA-Z\-]+$/', $username)){
+                        $usernameError = "Username should contain only letters and one symbol(-)!";
+                    }
+                }
+        
+                if(empty($password)){
+                    $passwordError = "Password is required!";
+                }
+                else{
+                    if(strlen($password) < 8){
+                        $passwordError = "Password must be at least 8 characters!";
+                    }else if (!preg_match('/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/', $password)){
+                        $passwordError = "Password should contain only letters(case insensitive) and numbers!";
+                    }
+                }
+                $query = $db->startConnection()->prepare("SELECT * FROM users WHERE username = '$username' AND password = '$password'");
+                $query->execute([$username, $password]);
+                $control = $query->fetch(PDO::FETCH_OBJ);
+                if($control > 0){
+                    $_SESSION['username'] = $_POST['username'];
+                    header('Location:../../index.php');
+                }
+                else{
+                    echo "<script type='text/javascript'";
+                    echo "alert('Please enter a username and password');";
+                    echo "window.location.href='login.php'";
+                    echo "</script>";
+                }
             }
-        }
 
-        if(empty($password)){
-            $passwordError = "Password is required!";
+        }catch(PDOException $e){
+            echo "Database Connection Failed".$e->getMessage();
+            return null;
         }
-        else{
-            if(strlen($password) < 8){
-                $passwordError = "Password must be at least 8 characters!";
-            }else if (!preg_match('/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/', $password)){
-                $passwordError = "Password should contain only letters(case insensitive) and numbers!";
-            }
-        }
-
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,8 +76,8 @@
             <ul>
                 <li><a href="../../index.php">Home</a></li>
                 <li><a href="#footer">About Us</a></li>
-                <li><a target="_blank" href="market.php">Market</a></li>
-                <li><a target="_blank" href="buycrypto.php">Buy Crypto</a></li>
+                <li><a target="" href="market.php">Market</a></li>
+                <li><a target="" href="buycrypto.php">Buy Crypto</a></li>
             </ul>
             <a href="login.php" class="loginbtn" id="login-loginbtn">Log In</a>
         </nav>
@@ -72,7 +96,7 @@
                 <input type="password" placeholder="Enter your password" id="password" name="password">
             </div>
             <span style="font-size: 15px; color: red;"><?php echo $passwordError ?></span>
-            <div class="loginsub"><button type="submit" id="loginsubbtn" name="submit" onclick="validateLogInForm()">Log in</button></div>
+            <div class="loginsub"><button type="submit" id="loginsubbtn" name="login" onclick="validateLogInForm()">Log in</button></div>
             <div class="registerbtn"><a href="register.php" id="registerbtn">Register</a></div>
         </form>
         <div class="loginhero">

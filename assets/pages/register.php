@@ -9,7 +9,7 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
         $cpassword = $_POST['cpassword'];
-        $dateOfBirth = $_POST['dateOfBirth'];
+        $dateofbirth = $_POST['dateofbirth'];
 
         if(empty($username)){
             $usernameError = "<br/>Username is required!";
@@ -44,7 +44,7 @@
             $cpasswordError = "<br/>Passwords must match!";
         }
 
-        if(empty($date)){
+        if(empty($dateofbirth)){
             $dateError = "<br/>Date is required!";
         }
     }
@@ -71,8 +71,8 @@
             <ul>
                 <li><a href="../../index.php">Home</a></li>
                 <li><a href="#footer">About Us</a></li>
-                <li><a target="_blank" href="market.php">Market</a></li>
-                <li><a target="_blank" href="buycrypto.php">Buy Crypto</a></li>
+                <li><a target="" href="market.php">Market</a></li>
+                <li><a target="" href="buycrypto.php">Buy Crypto</a></li>
             </ul>
             <a href="login.php" class="loginbtn">Log In</a>
         </nav>
@@ -109,7 +109,7 @@
                 </div>
                 <div>
                     <label for="date"><b>Date of Birth: </b></label><br>
-                    <input type="date" name="dateOfBirth" id="date" >
+                    <input type="date" name="dateofbirth" id="date" >
                     <span style="font-size: 15px; color: red;"><?php echo $dateError ?></span>
                 </div>
                 <div class="">

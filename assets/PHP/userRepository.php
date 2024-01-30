@@ -17,14 +17,14 @@ class userRepository{
         $username = $user->getUsername();
         $email = $user->getEmail();
         $password = $user->getPassword();
-        $dateOfBirth = $user->getDateOfBirth();
+        $dateofbirth = $user->getDateofbirth();
 
         $sql = "INSERT INTO user (username, email, password, date_of_Birth) VALUES (?, ?, ?, ?)";
 
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$username, $email, $password, $dateOfBirth]);
+        $statement->execute([$username, $email, $password, $dateofbirth]);
 
         echo '<script> alert("User has been inserted succesfully!");</script>';
 
@@ -63,14 +63,14 @@ class userRepository{
     }
 
     //UPDATE
-    function updateUser($id,$username,$email,$password,$dateOfBirth){
+    function updateUser($id,$username,$email,$password,$dateofbirth){
         $conn = $this->connection;
 
-        $sql = "UPDATE user SET username=?, email=?, password=?, dateOfBirth=? WHERE id=?";
+        $sql = "UPDATE user SET username=?, email=?, password=?, dateofbirth=? WHERE id=?";
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$username, $email, $password, $dateOfBirth]);
+        $statement->execute([$username, $email, $password, $dateofbirth]);
 
         echo "<script>alert('Updated!'); </script>";
    } 

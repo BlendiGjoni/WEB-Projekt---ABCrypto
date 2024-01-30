@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+  header("location:login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +30,8 @@
             <ul>
                 <li><a href="index.php" id="current">Home</a></li>
                 <li><a href="#footer">About Us</a></li>
-                <li><a target="_blank" href="assets/pages/market.php">Market</a></li>
-                <li><a target="_blank" href="assets/pages/buycrypto.php">Buy Crypto</a></li>
+                <li><a target="" href="assets/pages/market.php">Market</a></li>
+                <li><a target="" href="assets/pages/buycrypto.php">Buy Crypto</a></li>
             </ul>
             <a target="_blank" href="assets/pages/login.php" class="loginbtn">Log In</a>
         </nav>
