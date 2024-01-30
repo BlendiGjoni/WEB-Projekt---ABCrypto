@@ -1,7 +1,14 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-  header("location:login.php");
+    header("location:assets/pages/login.php");
+}else{
+    echo "<style>
+        .loginbtn{
+            display: none !important;
+        }
+
+    </style>";
 }
 ?>
 <!DOCTYPE html>
@@ -34,6 +41,14 @@ if(!isset($_SESSION['username'])){
                 <li><a target="" href="assets/pages/buycrypto.php">Buy Crypto</a></li>
             </ul>
             <a target="_blank" href="assets/pages/login.php" class="loginbtn">Log In</a>
+            <div class="dropdown">
+                <div class="dropdown-button"><a href="" ><i class='bx bxs-user-circle' style=" color: green"></i></a></div>
+                <div class="dropdown-content">
+                    <a href="" class="dropdown-profile">Profile</a>
+                    <a href="" class="dropdown-dashboard">Dashboard</a>
+                    <a href="" class="dropdown-logout">Log Out</a>
+                </div>
+            </div>
         </nav>
     </header>
     <!-- ////////////////////////////////////////////////////////////////

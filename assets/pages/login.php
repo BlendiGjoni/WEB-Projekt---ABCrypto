@@ -33,18 +33,24 @@ session_start();
                         $passwordError = "Password should contain only letters(case insensitive) and numbers!";
                     }
                 }
-                $query = $db->startConnection()->prepare("SELECT * FROM users WHERE username = '$username' AND password = '$password'");
-                $query->execute([$username, $password]);
+                $query = $db->startConnection()->prepare("SELECT * FROM user WHERE username = :username AND password = :password");
+                $query->bindParam(':username', $username);
+                $query->bindParam(':password', $password);
+
+                // Execute the query
+                $query->execute();
                 $control = $query->fetch(PDO::FETCH_OBJ);
                 if($control > 0){
                     $_SESSION['username'] = $_POST['username'];
                     header('Location:../../index.php');
+                    exit();
                 }
                 else{
                     echo "<script type='text/javascript'";
                     echo "alert('Please enter a username and password');";
                     echo "window.location.href='login.php'";
                     echo "</script>";
+                    exit();
                 }
             }
 
