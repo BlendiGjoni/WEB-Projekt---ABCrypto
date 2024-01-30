@@ -1,7 +1,8 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-    header("location:assets/pages/login.php");
+    header("location:../../index.php");
+    echo "<style> .dropdown{display:none}</style>";
 }else{
     echo "<style>
         .loginbtn{
@@ -9,7 +10,7 @@ if(!isset($_SESSION['username'])){
         }
 
     </style>";
-}
+}   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,7 @@ if(!isset($_SESSION['username'])){
     <!-- //Kodi per links dhe sources. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -42,11 +43,11 @@ if(!isset($_SESSION['username'])){
             </ul>
             <a target="_blank" href="assets/pages/login.php" class="loginbtn">Log In</a>
             <div class="dropdown">
-                <div class="dropdown-button"><a href="" ><i class='bx bxs-user-circle' style=" color: green"></i></a></div>
-                <div class="dropdown-content">
-                    <a href="" class="dropdown-profile">Profile</a>
-                    <a href="" class="dropdown-dashboard">Dashboard</a>
-                    <a href="" class="dropdown-logout">Log Out</a>
+                <button class="dropdown-button"><i class='bx bxs-user-circle'></i></button>
+                <div class="dropdown-content" id="dropdc">
+                    <a href="#" class="dropdown-profile">Profile</a>
+                    <a href="#" class="dropdown-dashboard">Dashboard</a>
+                    <a href="assets/pages/logout.php" class="dropdown-logout">Log Out</a>
                 </div>
             </div>
         </nav>
