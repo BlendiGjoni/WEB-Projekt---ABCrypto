@@ -92,7 +92,7 @@ session_start();
     <!-- ////////////////////////////////////////////////////////////////
     //Kodi per main te login. Forma dhe foto. -->
     <main class="loginmain">
-        <form class="loginform" id="loginpop" method="post" action="">
+        <form class="loginform" id="loginpop" method="post" action="userprofile.php">
             <div id="logintxt">Login</div>
             <div class="login-text-input"><b>Username: </b>
                 <input type="text" placeholder="Enter your username" id="username" name="username">

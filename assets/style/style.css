@@ -786,6 +786,48 @@ Pjesa e main */
 
 
 
+/* //////////////////////////////////////////////////////////////////////////////////
+KODI PER USER PROFILE*/
+
+.profilemain{
+    display: flex;
+    justify-content: center;
+}
+.profileinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 500px;
+    padding: 60px 0px;
+    margin: 120px 0px;
+    font-size: 25px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border-radius: 35px;
+    background: #fff;
+    backdrop-filter: blur(20px);
+}
+.profileinfo img{
+    width: 120px !important;
+}
+.profileinfo div{
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px;
+    border-bottom: 2px solid #00B588;
+}
+.profileinfo div p{
+    padding: 5px 10px;
+}
+.userinfotext{
+    display: flex;
+    align-items: end;
+    font-size: 15px;
+    color: #2e7966;
+}
+
+
 /* ////////////////////////////////////////////////////////////////////////////////
 KODI PER MEDIAT(ndryshimin e stilit per te bere krejt faqet responzive) */
 @media (max-width: 1350px){

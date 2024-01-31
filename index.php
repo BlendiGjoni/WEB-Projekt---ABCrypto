@@ -45,7 +45,7 @@ if(!isset($_SESSION['username'])){
             <div class="dropdown">
                 <button class="dropdown-button"><i class='bx bxs-user-circle'></i></button>
                 <div class="dropdown-content" id="dropdc">
-                    <a href="#" class="dropdown-profile">Profile</a>
+                    <a href="assets/pages/userprofile.php" class="dropdown-profile">Profile</a>
                     <a href="#" class="dropdown-dashboard">Dashboard</a>
                     <a href="assets/pages/logout.php" class="dropdown-logout">Log Out</a>
                 </div>
