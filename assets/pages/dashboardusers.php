@@ -73,7 +73,7 @@ catch(PDOException $e){
                                 <td>$user[password]</td>
                                 <td>$user[date_of_birth]</td>
                                 <td>$user[user_type]</td>
-                                <td><a class='useredit' href='#'>Edit</a></td>
+                                <td><a class='useredit' href='edituserdashboard.php?id=$user[id]'>Edit</a></td>
                                 <td><a href='../PHP/deleteUser.php'>Delete</a></td>
                             </tr>
                             ";

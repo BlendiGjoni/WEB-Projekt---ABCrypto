@@ -70,7 +70,7 @@ class userRepository{
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$username, $email, $password, $dateofbirth]);
+        $statement->execute([$username, $email, $password, $dateofbirth, $id]);
 
         echo "<script>alert('Updated!'); </script>";
    } 
