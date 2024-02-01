@@ -76,3 +76,17 @@ function validateLogInForm(){
     }
 }
 ////////////////////////////////////////////////////////////////
+function toggleDropdown() {
+    var dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.classList.toggle('show');
+}
+
+document.addEventListener("click", function(event) {
+    if (!event.target.matches('dropdown-button')) {
+        var dropdownContent = document.querySelector('dropdown-content');
+        if (dropdownContent.classList.contains('show')) {
+            dropdownContent.classList.remove('show');
+        }
+    }
+});
+

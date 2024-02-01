@@ -1,4 +1,7 @@
 <?php
+
+////////////////////////////////////////////////////////////////
+// Kodi per userprofile php
 include '../PHP/databaseConnection.php';
 
 session_start();
@@ -9,21 +12,16 @@ if(!isset($_SESSION['username'])){
     echo "<style> .dropdown{display:none !important} </style>";
 }else{
     echo "<style> .loginbtn{display: none !important} </style>";
-}  
-
-if(isset($_POST['username'])){
-
-
-    $username = $_POST['username'];
-
-    $sql = "SELECT id, username, email, date_of_birth, user_type FROM user WHERE username = :username"; 
-    $statement = $conn->prepare($sql);
-    $statement->bindParam(':username', $username);
-    $statement->execute();
-
-    $user = $statement->fetch(PDO::FETCH_ASSOC);
-
+}  if(!isset($_SESSION['username'])){
+    header("location:login.php");
+    exit();
 }
+// marrja e te dhenave
+$usernm = $_SESSION['username'];
+$usrid = $_SESSION['id'];
+$usremail = $_SESSION['email'];
+$usrdate = $_SESSION['date_of_birth'];
+$usrtype = $_SESSION['user_type'];
 ?>
 
 <!DOCTYPE html>
@@ -43,29 +41,31 @@ if(isset($_POST['username'])){
     <header>    
         <?php include 'components/navbar.php' ?>
     </header>
-
+    <!-- ///////////////////////////////////////////////////////////////////////////////
+    KODI PER USER PROFILE MAIN
+     -->
     <main class="profilemain">
         <div class="profileinfo">
             <img src="../images/userprofilepic.png" alt="">
                 <div class="userprofile-username">
                     <p class="userinfotext">Username: </p>
-                    <p><?php echo isset($user['username']) ? $user['username'] : ''; ?></p>
+                    <p><?php echo $usernm ?></p>
                 </div>    
                 <div class="userprofile-id">
                     <p class="userinfotext">ID: </p>
-                    <p><?php echo isset($user['id']) ? $user['id'] : ''; ?></p>
+                    <p><?php echo $usrid ?></p>
                 </div>    
                 <div class="userprofile-email">
                     <p class="userinfotext">Email: </p>
-                    <p><?php echo isset($user['email']) ? $user['email'] : ''; ?></p>
+                    <p><?php echo $usremail ?></p>
                 </div>
                 <div class="userprofile-date">
                     <p class="userinfotext">Date of birth: </p>
-                    <p><?php echo isset($user['date_of_birth']) ? $user['date_of_birth'] : ''; ?></p>
+                    <p><?php echo $usrdate ?></p>
                 </div>     
                 <div class="userprofile-type">
                     <p class="userinfotext">Role: </p>
-                    <p><?php echo isset($user['user_type']) ? $user['user_type'] : ''; ?></p>
+                    <p><?php echo $usrtype ?></p>
                 </div>
         </div>
     </main>

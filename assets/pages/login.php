@@ -33,14 +33,27 @@ session_start();
                     $query->bindParam(':password', $password);
         
                     $query->execute();
-                    $control = $query->fetch(PDO::FETCH_OBJ);
-                    if($control > 0){
-                        $_SESSION['username'] = $_POST['username'];
+
+                    // $control = $query->fetch(PDO::FETCH_OBJ);
+                    // if($control > 0){
+                    //     $_SESSION['username'] = $_POST['username'];
+                    //     header('Location:index.php');
+                    //     exit();
+                    // }
+                    
+                    $user = $query->fetch(PDO::FETCH_ASSOC);
+                    if($user){
+                        $_SESSION['username'] = $user['username'];
+                        $_SESSION['id'] = $user['id'];
+                        $_SESSION['email'] = $user['email'];
+                        $_SESSION['date_of_birth'] = $user['date_of_birth'];
+                        $_SESSION['user_type'] = $user['user_type'];
+
                         header('Location:index.php');
                         exit();
                     }
                     else{
-                        echo "<script type='text/javascript'";
+                        echo "<script type='text/javascript'>";
                         echo "alert('Please enter a username and password');";
                         echo "window.location.href='login.php'";
                         echo "</script>";

@@ -9,7 +9,7 @@
             </ul>
             <a target="" href="login.php" class="loginbtn">Log In</a>
             <div class="dropdown">
-                <button class="dropdown-button"><i class='bx bxs-user-circle'></i></button>
+            <button class="dropdown-button" onclick="toggleDropdown()"><i class='bx bxs-user-circle'></i></button>
                 <div class="dropdown-content" id="dropdc">
                     <a href="userprofile.php" class="dropdown-profile">Profile</a>
                     <a href="dashboardhome.php" class="dropdown-dashboard">Dashboard</a>
