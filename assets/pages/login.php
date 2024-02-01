@@ -2,7 +2,7 @@
 include '../PHP/databaseConnection.php';
 
 session_start();
-    
+echo "<style> .dropdown{display:none !important} </style>";
     $usernameError = "";
     $passwordError = "";
         try{

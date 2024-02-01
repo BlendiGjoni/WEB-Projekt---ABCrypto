@@ -885,6 +885,7 @@ KODI PER USER PROFILE*/
 .profilemain{
     display: flex;
     justify-content: center;
+    margin: 0px;
 }
 .profileinfo{
     display: flex;

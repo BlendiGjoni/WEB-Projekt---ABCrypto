@@ -46,7 +46,7 @@ include_once 'databaseConnection.php';
     }
 
     
-    function getUserById($id){
+    function getProductById($id){
         $conn = $this->connection;
 
         $sql = "SELECT * FROM product WHERE product_id='$id'";

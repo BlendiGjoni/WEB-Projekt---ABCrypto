@@ -75,7 +75,50 @@ function validateLogInForm(){
         return;
     }
 }
+//////////////////////////////////////////////////////////////
+// Kodi per validimin e product
+
+let productnameRegex = /^[a-zA-Z]{3,}$/;
+let productshortcutRegex = /^[a-zA-Z]{1,3}$/;
+let productlastpriceRegex = /^\d+(\.\d+)?$/;
+let productpercRegex = /^-?([1-9][0-9]?|100)$/;
+let productmarketcapRegex = /^\d+(\.\d+)?$/;
+function validateProduct(){
+    let productname = document.getElementById("prodname").value;
+    document.getElementById("productnameError").innerText = '';
+    let productshortcut = document.getElementById("prodshortcut").value;
+    document.getElementById("productshortcutError").innerText = '';
+    let productlastprice = document.getElementById("prodlastprice").value;
+    document.getElementById("productlastpriceError").innerText = '';
+    let productperc = document.getElementById("prodperc").value;
+    document.getElementById("productpercError").innerText = '';
+    let productmarketcap = document.getElementById("prodmarketcap").value;
+    document.getElementById("productmarketcapError").innerText = '';
+
+    if(!productnameRegex.test(productname)){
+        //document.getElementById("productnameError").innerText = 'Invalid name!';
+        return;
+    }
+    if(!productshortcutRegex.test(productshortcut)){
+        //document.getElementById("productshortcutError").innerText = 'Invalid shortcut!';
+        return;
+    }
+    if(!productlastpriceRegex.test(productlastprice)){
+        //document.getElementById("productlastpriceError").innerText = 'Invalid price!';
+        return;
+    }
+    if(!productpercRegex.test(productperc)){
+        //document.getElementById("productpercError").innerText = 'Invalid percentage!';
+        return;
+    }
+    if(!productmarketcapRegex.test(productmarketcap)){
+        //document.getElementById("productmarketcapError").innerText = 'Invalid market cap!';
+        return;
+    }
+}
+
 ////////////////////////////////////////////////////////////////
+//Kodi per dropdown.
 function toggleDropdown() {
     var dropdownContent = document.querySelector('.dropdown-content');
     dropdownContent.classList.toggle('show');

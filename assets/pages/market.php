@@ -153,22 +153,31 @@ if(!isset($_SESSION['username'])){
                 </tr>
                 <?php
                 include_once '../PHP/productRepository.php';
+                include_once '../PHP/userRepository.php';
 
                 $pR = new productRepository();
+                $uR = new userRepository();
                 $products = $pR->getAllProducts();
 
                 foreach($products as $product){
-                    $imageData = base64_encode($product['product_logo']);
+                    $imageName = $product['product_logo'];
+                    $imagePath = "../images/$imageName";
+                    $imageData = base64_encode(file_get_contents($imagePath));
+                    $imageType = 'image/png';
+                    $imageSrc = "data:$imageType;base64,$imageData";
+
+                    $addedBy = $uR->getUserById($product['fk_user_id']);
+
                     echo "
                         <tr class='table-row'>
                             <td class='table-data'><button class='add-to-fav'><i class='bx bx-star'></i></button></td>
                             <th class='table-data rank'>$product[product_id]</th>
-                            <td class='table-data'><div class='wrapper'><img src='data:image/svg;base64,$imageData' width='20px' height='20px' alt='Avalanche Logo'><h3><a href='#' class='coin-name'>$product[product_name] <span>$product[product_name_shortcut]</span></a></h3></div></td>
+                            <td class='table-data'><div class='wrapper'><img src='$imageSrc' width='20px' height='20px' alt='Avalanche Logo'><h3><a href='#' class='coin-name'>$product[product_name] <span>$product[product_name_shortcut]</span></a></h3></div></td>
                             <td class='table-data last-price'>$$product[product_last_price]</td>
                             <td class='table-data last-update green'>+$product[product_perc]%</td>
                             <td class='table-data market-cap'>$$product[product_market_cap]</td>
                             <td class='table-data'><img src='$product[product_chart]' width='100px' height='40px' alt='profit chart'></td>
-                            <td class='table-data'>$product[fk_user_id]</td>
+                            <td class='table-data'>$addedBy[id], $addedBy[username], $addedBy[user_type]</td>
                             <td class='table-data'><button class='btn-trade'>Trade</button></td>
                         </tr>
                     ";

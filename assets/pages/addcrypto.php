@@ -28,6 +28,8 @@ try{
     
         if(empty($product_logo)){
             $product_logoError = "Product logo required!";
+        }else if($product_logo){
+
         }
         if(empty($product_name)){
             $product_nameError = "Product name required!";
@@ -46,6 +48,15 @@ try{
         }
         if(empty($product_chart)){
             $product_chartError = "Product chart required!";
+        }
+        if (empty($product_logoError) && empty($product_nameError) && empty($product_name_shortcutError) && empty($product_last_priceError) && empty($product_percError) && empty($product_market_capError) && empty($product_chartError)) {
+            include_once '../PHP/productRepository.php';
+            include_once '../PHP/product.php';
+
+            $product = new product($product_logo, $product_name, $product_name_shortcut, $product_last_price, $product_perc, $product_market_cap, $product_chart, $fk_user_id);
+            $productRepository = new productRepository();
+
+            $productRepository->insertProduct($product);
         }
     }
 }
@@ -84,40 +95,40 @@ catch(PDOException $e){
                 <div class="addcryptolabels">
                     <label for="image">Crypto's Logo: </label>
                     <input type="file" name="product_logo" id="">
-                    <span><?php echo $product_logoError ?></span>
+                    <span id="productlogoError"><?php echo $product_logoError ?></span>
                 </div>
                 <div class="addcryptolabels">
                     <label for="name">Crypto's name: </label>
-                    <input type="text" name="product_name" id="">
-                    <span><?php echo $product_nameError ?></span>
+                    <input type="text" name="product_name" id="prodname">
+                    <span id="productnameError"><?php echo $product_nameError ?></span>
                 </div>
                 <div class="addcryptolabels">
                     <label for="shortname">Crypto's shortcut: </label>
-                    <input type="text" name="product_name_shortcut" id="">
-                    <span><?php echo $product_name_shortcutError ?></span>
+                    <input type="text" name="product_name_shortcut" id="prodshortcut">
+                    <span id="productshortcutError"><?php echo $product_name_shortcutError ?></span>
                 </div>
                 <div class="addcryptolabels">
                     <label for="lastprice">Crypto's last price:</label>
-                    <input type="text" name="product_last_price" id="">
-                    <span><?php echo $product_last_priceError ?></span>
+                    <input type="text" name="product_last_price" id="prodlastprice">
+                    <span id="productlastpriceError"><?php echo $product_last_priceError ?></span>
                 </div>
                 <div class="addcryptolabels">
                     <label for="priceperc">Crypto's last 24h price percentage:</label>
-                    <input type="text" name="product_perc" id="">
-                    <span><?php echo $product_last_priceError ?></span>
+                    <input type="text" name="product_perc" id="prodperc">
+                    <span id="productpercError"><?php echo $product_percError ?></span>
                 </div>
                 <div class="addcryptolabels">
                     <label for="marketcap">Crypto's market cap:</label>
-                    <input type="text" name="product_market_cap" id="">
-                    <span><?php echo $product_market_capError ?></span>
+                    <input type="text" name="product_market_cap" id="prodmarketcap">
+                    <span id="productmarketcapError"><?php echo $product_market_capError ?></span>
                 </div>
                 <div class="addcryptolabels">
                     <label for="cryptochart">Crypto's last 24h chart:</label>
                     <input type="file" name="product_chart" id="">
-                    <span><?php echo $product_chartError ?></span>
+                    <span id="productchartError"><?php echo $product_chartError ?></span>
                 </div>
                 <div class="addcryptolabels">
-                    <button type="submit" name="add">Add</button>
+                    <button type="submit" name="add" onclick="validateProduct()">Add</button>
                 </div>
             </form>
         </div>
@@ -133,6 +144,6 @@ catch(PDOException $e){
 
     <!-- //source i javascript -->
     <script src="../script/script.js"></script>
-    <?php include_once '../PHP/productRegisterController.php'; ?>
+    
 </body>
 </html>

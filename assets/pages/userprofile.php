@@ -12,6 +12,9 @@ if(!isset($_SESSION['username'])){
     echo "<style> .dropdown{display:none !important} </style>";
 }else{
     echo "<style> .loginbtn{display: none !important} </style>";
+    if($_SESSION['user_type'] == 'user'){
+        echo "<style> .dropdown-dashboard{display:none !important} </style>";
+    }
 }  if(!isset($_SESSION['username'])){
     header("location:login.php");
     exit();
