@@ -884,6 +884,37 @@ KODI PER DASHBOARDHOME*/
     font-weight: bold;
 }
 
+/* //////////////////////////////////////////////////////////////////////////////////
+KODI PER DASHBOARDUSERS*/
+.maindsu{
+    display: flex;
+}
+.dashboard-users-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-users-table{
+    border-collapse: collapse;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.dashboard-users-content th{
+    text-align: left;
+    border-block-end: 1px solid #002D22;
+    padding: 10px 20px;
+}
+.dashboard-users-content td{
+    border-block-end: 1px solid #002D22;
+    padding: 10px 20px;
+}
+.dashboard-users-table td a{
+    color: #C6204C;
+}
+.dashboard-users-table .useredit{
+    color: #FDA91D;
+}
 
 /* //////////////////////////////////////////////////////////////////////////////////
 KODI PER SIDEBAR*/

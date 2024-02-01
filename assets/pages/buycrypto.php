@@ -1,7 +1,11 @@
 <?php
-include '../PHP/databaseConnection.php';
-
 session_start();
+if(!isset($_SESSION['username'])){
+    header("location:login.php");
+    echo "<style> .dropdown{display:none !important} </style>";
+}else{
+    echo "<style> .loginbtn{display: none !important} </style>";
+}   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +13,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style.css?v=<?php echo time(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">

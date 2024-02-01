@@ -13,11 +13,6 @@ if(!isset($_SESSION['username'])){
 try{
     $dc = new databaseConnection();
     $currentUser = $_SESSION['username'];
-    $userc = $dc->startConnection()->query("SELECT * FROM user");
-    $userc = $userc->rowCount();
-
-    $adminc = $dc->startConnection()->query("SELECT * FROM user WHERE user_type = 'admin'");
-    $adminc = $adminc->rowCount();
 }
 catch(PDOException $e){
             echo "Database Connection Failed".$e->getMessage();
@@ -36,7 +31,7 @@ catch(PDOException $e){
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="../images/logologo.png">
-    <title>Dashboard Home - ABCrypto</title>
+    <title>Dashboard Users - ABCrypto</title>
 </head>
 
 <body>
@@ -49,24 +44,42 @@ catch(PDOException $e){
     <!-- ////////////////////////////////////////////////////////////////
     //Kodi per main te market. Links dhe tabela e produkteve. -->
     <main>
-        <div class="maindsh">
+        <div class="maindsu">
             <?php include 'components/sidebar.php' ?>
-            <div class="dashboard-home-content">
-                <div class="dhc-box">
-                    <i class='bx bxs-user-voice'></i>
-                    <h2>Admins</h2>
-                    <span><?php echo $adminc ?></span>
-                </div>
-                <div class="dhc-box">
-                    <i class='bx bxs-coin-stack' ></i>
-                    <h2>Products</h2>
-                    <span>2</span>
-                </div>
-                <div class="dhc-box">
-                    <i class='bx bxs-user'></i>
-                    <h2>Users</h2>
-                    <span><?php echo $userc ?></span>
-                </div>
+            <div class="dashboard-users-content">
+                <table class="dashboard-users-table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Date of Birth</th>
+                        <th>User Type</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <?php
+                        include_once '../PHP/userRepository.php';
+                        $userR = new userRepository();
+                        $allusers = $userR->getAllUsers();
+
+                        foreach ($allusers as $user){
+                            echo
+                            "
+                            <tr>
+                                <td>$user[id]</td>
+                                <td>$user[username]</td>
+                                <td>$user[email]</td>
+                                <td>$user[password]</td>
+                                <td>$user[date_of_birth]</td>
+                                <td>$user[user_type]</td>
+                                <td><a class='useredit' href='#'>Edit</a></td>
+                                <td><a href='../PHP/deleteUser.php'>Delete</a></td>
+                            </tr>
+                            ";
+                        }
+                    ?>
+                </table>
             </div>
         </div>
     </main>
