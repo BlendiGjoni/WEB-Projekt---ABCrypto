@@ -206,7 +206,7 @@ if(!isset($_SESSION['username'])){
     <!-- ////////////////////////////////////////////////////////////////
     //Kodi per footer. -->
     <footer>
-        <?php include 'components/footer.php' ?>;
+        <?php include 'components/footer.php' ?>
     </footer>
 
     <!-- //source i javascript -->

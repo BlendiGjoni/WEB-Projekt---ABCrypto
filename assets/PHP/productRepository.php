@@ -1,4 +1,5 @@
 <?php 
+include_once 'databaseConnection.php';
 
     class productRepository {
 
@@ -10,24 +11,24 @@
         }
 
         //CREATE
-        function insertUser($product){
+        function insertProduct($product){
             $conn = $this->connection;
 
-            $product_id = $product->getId();
-            $product_logo = $product->getLogo();
-            $product_name = $product->getName();
+            $product_id = $product->getProductId();
+            $product_logo = $product->getProductLogo();
+            $product_name = $product->getProductName();
             $product_name_shortcut = $product->getProductNameShortcut();
-            $product_last_price = $product->getLastPrice();
-            $product_perc = $product->getPerc();
-            $product_market_cap = $product->getMarketCap();
-            $product_chart = $product->getChart();
+            $product_last_price = $product->getProductLastPrice();
+            $product_perc = $product->getProductPerc();
+            $product_market_cap = $product->getProductMarketCap();
+            $product_chart = $product->getProductChart();
             $fk_user_id = $product->getFkUserId();
 
-            $sql = "INSERT INTO product (product_logo, product_name, product_name_shortcut, product_last_price, product_perc, product_market_cap, product_chart) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO product (product_logo, product_name, product_name_shortcut, product_last_price, product_perc, product_market_cap, product_chart, fk_user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
             $statement = $conn->prepare($sql);
 
-            $statement->execute([$product_logo, $product_name, $product_name_shortcut, $product_last_price, $product_perc, $product_market_cap, $product_chart]);
+            $statement->execute([$product_logo, $product_name, $product_name_shortcut, $product_last_price, $product_perc, $product_market_cap, $product_chart, $fk_user_id]);
 
             echo '<script> alert("Product has been inserted succesfully!");</script>';
     }

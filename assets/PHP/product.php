@@ -11,8 +11,7 @@
         private $product_chart;
         private $fk_user_id;
 
-        function __construct($product_id, $product_logo, $product_name, $product_name_shortcut, $product_last_price, $product_perc, $product_market_cap, $product_chart, $fk_user_id){
-            $this->product_id = $product_id;
+        function __construct($product_logo, $product_name, $product_name_shortcut, $product_last_price, $product_perc, $product_market_cap, $product_chart, $fk_user_id){
             $this->product_logo = $product_logo;
             $this->product_name = $product_name;
             $this->product_name_shortcut = $product_name_shortcut;

@@ -66,7 +66,7 @@ class userRepository{
     function updateUser($id,$username,$email,$password,$dateofbirth){
         $conn = $this->connection;
 
-        $sql = "UPDATE user SET username=?, email=?, password=?, dateofbirth=? WHERE id=?";
+        $sql = "UPDATE user SET username=?, email=?, password=?, date_of_birth=? WHERE id=?";
 
         $statement = $conn->prepare($sql);
 

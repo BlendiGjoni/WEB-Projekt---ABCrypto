@@ -5,7 +5,10 @@ if(!isset($_SESSION['username'])){
     echo "<style> .dropdown{display:none !important} </style>";
 }else{
     echo "<style> .loginbtn{display: none !important} </style>";
-}   
+    if($_SESSION['user_type'] == 'user'){
+        echo "<style> .dropdown-dashboard{display:none !important} </style>";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,6 +58,7 @@ if(!isset($_SESSION['username'])){
                     <th class="table-heading">24h%</th>
                     <th class="table-heading">Market Cap</th>
                     <th class="table-heading">Last 7 Days</th>
+                    <th class="table-heading">Added by:</th>
                     <th class="table-heading"></th>
                 </tr>
             </thead>
@@ -67,6 +71,7 @@ if(!isset($_SESSION['username'])){
                     <td class="table-data last-update green">+1.45%</td>
                     <td class="table-data market-cap">$880,423,640,582</td>
                     <td class="table-data"><img src="../images/chart-1.svg" width="100px" height="40px" alt="profit chart"></td>
+                    <td class="table-data"></td>
                     <td class="table-data"><button class="btn-trade">Trade</button></td>
                 </tr>
                 <tr class="table-row">
@@ -77,6 +82,7 @@ if(!isset($_SESSION['username'])){
                     <td class="table-data last-update red">-5.12%</td>
                     <td class="table-data market-cap">$880,423,640,582</td>
                     <td class="table-data"><img src="../images/chart-2.svg" width="100px" height="40px" alt="profit chart"></td>
+                    <td class="table-data"></td>
                     <td class="table-data"><button class="btn-trade">Trade</button></td>
                 </tr>
                 <tr class="table-row">
@@ -87,6 +93,7 @@ if(!isset($_SESSION['username'])){
                     <td class="table-data last-update green">+1.45%</td>
                     <td class="table-data market-cap">$880,423,640,582</td>
                     <td class="table-data"><img src="../images/chart-1.svg" width="100px" height="40px" alt="profit chart"></td>
+                    <td class="table-data"></td>
                     <td class="table-data"><button class="btn-trade">Trade</button></td>
                 </tr>
                 <tr class="table-row">
@@ -97,6 +104,7 @@ if(!isset($_SESSION['username'])){
                     <td class="table-data last-update red">-3.75%</td>
                     <td class="table-data market-cap">$880,423,640,582</td>
                     <td class="table-data"><img src="../images/chart-2.svg" width="100px" height="40px" alt="profit chart"></td>
+                    <td class="table-data"></td>
                     <td class="table-data"><button class="btn-trade">Trade</button></td>
                 </tr>
                 <tr class="table-row">
@@ -107,6 +115,7 @@ if(!isset($_SESSION['username'])){
                     <td class="table-data last-update green">+1.45%</td>
                     <td class="table-data market-cap">$880,423,640,582</td>
                     <td class="table-data"><img src="../images/chart-1.svg" width="100px" height="40px" alt="profit chart"></td>
+                    <td class="table-data"></td>
                     <td class="table-data"><button class="btn-trade">Trade</button></td>
                 </tr>
                 <tr class="table-row">
@@ -117,6 +126,7 @@ if(!isset($_SESSION['username'])){
                     <td class="table-data last-update red">-2.22%</td>
                     <td class="table-data market-cap">$880,423,640,582</td>
                     <td class="table-data"><img src="../images/chart-2.svg" width="100px" height="40px" alt="profit chart"></td>
+                    <td class="table-data"></td>
                     <td class="table-data"><button class="btn-trade">Trade</button></td>
                 </tr>
                 <tr class="table-row">
@@ -127,6 +137,7 @@ if(!isset($_SESSION['username'])){
                     <td class="table-data last-update green">+0.8%</td>
                     <td class="table-data market-cap">$880,423,640,582</td>
                     <td class="table-data"><img src="../images/chart-1.svg" width="100px" height="40px" alt="profit chart"></td>
+                    <td class="table-data"></td>
                     <td class="table-data"><button class="btn-trade">Trade</button></td>
                 </tr>
                 <tr class="table-row">
@@ -137,10 +148,37 @@ if(!isset($_SESSION['username'])){
                     <td class="table-data last-update green">+1.41%</td>
                     <td class="table-data market-cap">$880,423,640,582</td>
                     <td class="table-data"><img src="../images/chart-1.svg" width="100px" height="40px" alt="profit chart"></td>
+                    <td class="table-data"></td>
                     <td class="table-data"><button class="btn-trade">Trade</button></td>
                 </tr>
+                <?php
+                include_once '../PHP/productRepository.php';
+
+                $pR = new productRepository();
+                $products = $pR->getAllProducts();
+
+                foreach($products as $product){
+                    $imageData = base64_encode($product['product_logo']);
+                    echo "
+                        <tr class='table-row'>
+                            <td class='table-data'><button class='add-to-fav'><i class='bx bx-star'></i></button></td>
+                            <th class='table-data rank'>$product[product_id]</th>
+                            <td class='table-data'><div class='wrapper'><img src='data:image/svg;base64,$imageData' width='20px' height='20px' alt='Avalanche Logo'><h3><a href='#' class='coin-name'>$product[product_name] <span>$product[product_name_shortcut]</span></a></h3></div></td>
+                            <td class='table-data last-price'>$$product[product_last_price]</td>
+                            <td class='table-data last-update green'>+$product[product_perc]%</td>
+                            <td class='table-data market-cap'>$$product[product_market_cap]</td>
+                            <td class='table-data'><img src='$product[product_chart]' width='100px' height='40px' alt='profit chart'></td>
+                            <td class='table-data'>$product[fk_user_id]</td>
+                            <td class='table-data'><button class='btn-trade'>Trade</button></td>
+                        </tr>
+                    ";
+                }
+                ?>
             </tbody>
         </table>
+        <div class="addcryptolink">
+            <h2><a href="addcrypto.php">Add Crypto</a></h2>
+        </div>
     </div>
 
     <!-- ////////////////////////////////////////////////////////////////

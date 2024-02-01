@@ -84,7 +84,7 @@ header #menu-icon{
     position: relative;
 }
 .dropdown-button {
-    background-color: white;
+    background-color: transparent ;
     color: #002D22;
     padding: 5px;
     border: none;
@@ -543,6 +543,73 @@ footer #copyright{
     background-color: #002D22;
     color: #fff;
 }
+.addcryptolink{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5%;
+}
+
+.addcryptolink a{
+    color: white;
+    background-color: #C6204C;
+    padding: 10px 20px;
+    border: 2px solid #C6204C;
+    border-radius: 20px;
+    transition: 0.3s all ease;
+}
+.addcryptolink a:hover{
+    color: #C6204C;
+    background-color: white;
+    border: 2px solid #C6204C ;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+KODI PER FAQEN ADD CRYPTO */
+.addcryptomain{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addcryptomain form{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 30px;
+    padding: 50px 100px;
+    gap: 10px;
+}
+.addcryptomain span{
+    color: #FDA91D;
+    font-size: 15px;
+}
+.addcryptolabels{
+    display: flex;
+    flex-direction: column;
+}
+.addcryptolabels input{
+    height: 30px;
+    border: 1px solid #002D22;
+    border-radius: 10px;
+    align-items: center;
+    padding: 0px 15px;
+}
+.addcryptolabels button{
+    height: 30px;
+    color: white;
+    background-color: #C6204C;
+    border: 1px solid #C6204C;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.addcryptolabels button:hover{
+    cursor: pointer;
+    color: #C6204C;
+    background-color: white;
+}
 
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -915,6 +982,54 @@ KODI PER DASHBOARDUSERS*/
 .dashboard-users-table .useredit{
     color: #FDA91D;
 }
+
+
+/* //////////////////////////////////////////////////////////////////////////////////
+KODI PER DASHBOARD EDIT USERS*/
+
+.maindsedit{
+    display: flex;
+}
+
+.maindsedit .editform{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editform form{
+    padding: 60px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editform form input{
+    width: 300px;
+    height: 40px;
+    border: 1px solid #FDA91D;
+    border-radius: 10px;
+    padding: 0px 15px;
+}
+.editform .inputedit:hover{
+    border: 2px solid #FDA91D;
+}
+.editform .editsubmit{
+    color: white;
+    background-color: #FDA91D;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+.editform .editsubmit:hover{
+    color: #FDA91D;
+    background-color: white;
+    border: 1px solid #FDA91D;
+}
+
 
 /* //////////////////////////////////////////////////////////////////////////////////
 KODI PER SIDEBAR*/

@@ -14,7 +14,7 @@ session_start();
                 if(empty($username)){
                     $usernameError = "Username is required!";
                 }
-                else if(empty($password)){
+                if(empty($password)){
                     $passwordError = "Password is required!";
                 }
                 else{
