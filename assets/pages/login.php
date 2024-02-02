@@ -102,7 +102,7 @@ echo "<style> .dropdown{display:none !important} </style>";
             </div>
             <span style="font-size: 15px; color: red;"><?php echo $passwordError ?></span>
             <div class="loginsub"><button type="submit" id="loginsubbtn" name="login" onclick="validateLogInForm()">Log in</button></div>
-            <div class="registerbtn"><a href="register.php" id="registerbtn">Register</a></div>
+            <div class="registerbtn"><span>Don't have an account?</span> <a href="register.php" id="registerbtn">Register</a></div>
         </form>
         <div class="loginhero">
             <img src="../images/babella.png" alt="" width="500px">

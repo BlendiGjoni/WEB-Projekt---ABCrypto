@@ -165,7 +165,12 @@ if(!isset($_SESSION['username'])){
                     $imageData = base64_encode(file_get_contents($imagePath));
                     $imageType = 'image/png';
                     $imageSrc = "data:$imageType;base64,$imageData";
-
+                    
+                    $chartName = $product['product_chart'];
+                    $chartPath = "../images/$chartName";
+                    $chartData = base64_encode(file_get_contents($chartPath));
+                    $chartType = 'image/png';
+                    $chartSrc = "data:$chartType;base64,$chartData";
                     $addedBy = $uR->getUserById($product['fk_user_id']);
 
                     echo "
@@ -176,7 +181,7 @@ if(!isset($_SESSION['username'])){
                             <td class='table-data last-price'>$$product[product_last_price]</td>
                             <td class='table-data last-update green'>+$product[product_perc]%</td>
                             <td class='table-data market-cap'>$$product[product_market_cap]</td>
-                            <td class='table-data'><img src='$product[product_chart]' width='100px' height='40px' alt='profit chart'></td>
+                            <td class='table-data'><img src='$chartSrc' width='100px' height='40px' alt='profit chart'></td>
                             <td class='table-data'>$addedBy[id] - $addedBy[username] : $addedBy[user_type]</td>
                             <td class='table-data'><button class='btn-trade'>Trade</button></td>
                         </tr>

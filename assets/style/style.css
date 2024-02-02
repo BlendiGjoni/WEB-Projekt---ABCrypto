@@ -800,7 +800,9 @@ Pjesa e main */
     cursor: pointer;
     transition: all 0.2s ease;
 }
-
+.registerbtn span{
+    font-size: 15px;
+}
 
 
 

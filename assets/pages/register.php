@@ -4,6 +4,8 @@
     $passwordError = "";
     $cpasswordError = "";
     $dateError = "";
+    
+    echo "<style> .dropdown{display:none !important} </style>";
     if(isset($_POST['submit'])){
         $username = $_POST['username'];
         $email = $_POST['email'];
@@ -46,6 +48,16 @@
 
         if(empty($dateofbirth)){
             $dateError = "<br/>Date is required!";
+        }
+
+        if (empty($usernameError) && empty($emailError) && empty($passwordError) && empty($cpasswordError) && empty($dateError)) {
+            include_once '../PHP/userRepository.php';
+            include_once '../PHP/user.php';
+
+            $user = new User($username, $email, $password, $dateofbirth);
+            $userRepository = new userRepository();
+    
+            $userRepository->insertUser($user);
         }
     }
 ?>
@@ -115,7 +127,6 @@
         <?php include 'components/footer.php' ?>
     </footer>
     <script src="../script/script.js"></script>
-    <?php include_once '../PHP/registerController.php'; ?>
 </body>
 
 </html>
