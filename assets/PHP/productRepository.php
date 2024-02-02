@@ -59,7 +59,7 @@ include_once 'databaseConnection.php';
 
     
     //UPDATE
-    function updateProduct($product_id,$username,$email,$password,$dateofbirth){
+    function updateProduct($product_id,$product_logo,$product_name,$product_name_shortcut,$product_last_price,$product_perc,$product_market_cap,$product_chart){
         $conn = $this->connection;
 
         $sql = "UPDATE product SET product_logo=?, product_name=?, product_name_shortcut=?, product_last_price=?, product_perc=?, product_market_cap=?, product_chart=? WHERE product_id=?";

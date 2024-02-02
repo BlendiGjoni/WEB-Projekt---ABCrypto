@@ -31,7 +31,7 @@ catch(PDOException $e){
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="../images/logologo.png">
-    <title>Dashboard Users - ABCrypto</title>
+    <title>Dashboard Crypto's - ABCrypto</title>
 </head>
 
 <body>
@@ -44,37 +44,48 @@ catch(PDOException $e){
     <!-- ////////////////////////////////////////////////////////////////
     //Kodi per main te market. Links dhe tabela e produkteve. -->
     <main>
-        <div class="maindsu">
+        <div class="maindsc">
             <?php include 'components/sidebar.php' ?>
-            <div class="dashboard-users-content">
-                <table class="dashboard-users-table">
+            <div class="dashboard-crypto-content">
+                <table class="dashboard-crypto-table">
                     <tr>
                         <th>ID</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Password</th>
+                        <th>Logo</th>
+                        <th>Name</th>
+                        <th>Shortcut</th>
+                        <th>Last Price</th>
                         <th>Date of Birth</th>
-                        <th>User Type</th>
+                        <th>Market Cap</th>
+                        <th>Last 7 Days</th>
+                        <th>Added by:</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                     <?php
                         include_once '../PHP/userRepository.php';
-                        $userR = new userRepository();
-                        $allusers = $userR->getAllUsers();
+                        include_once '../PHP/productRepository.php';
+                        $uR = new userRepository();
+                        $productR = new productRepository();
+                        $allproducts = $productR->getAllProducts();
 
-                        foreach ($allusers as $user){
+
+                        // $addedBy = $uR->getUserById($product['fk_user_id']);
+
+                        foreach ($allproducts as $product){
                             echo
                             "
                             <tr>
-                                <td>$user[id]</td>
-                                <td>$user[username]</td>
-                                <td>$user[email]</td>
-                                <td>$user[password]</td>
-                                <td>$user[date_of_birth]</td>
-                                <td>$user[user_type]</td>
-                                <td><a class='useredit' href='edituserdashboard.php?id=$user[id]'>Edit</a></td>
-                                <td><a href='../PHP/deleteUser.php?id=$user[id]'>Delete</a></td>
+                                <td>$product[product_id]</td>
+                                <td>$product[product_logo]</td>
+                                <td>$product[product_name]</td>
+                                <td>$product[product_name_shortcut]</td>
+                                <td>$product[product_last_price]</td>
+                                <td>$product[product_perc]</td>
+                                <td>$product[product_market_cap]</td>
+                                <td>$product[product_chart]</td>
+                                <td>$product[fk_user_id]</td>
+                                <td><a class='productedit' href='editcryptodashboard.php?product_id=$product[product_id]'>Edit</a></td>
+                                <td><a href='../PHP/deleteProduct.php?product_id=$product[product_id]'>Delete</a></td>
                             </tr>
                             ";
                         }

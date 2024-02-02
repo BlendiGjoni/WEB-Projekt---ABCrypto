@@ -8,7 +8,7 @@
                 <ul class="dashlinks">
                     <li><a href="dashboardhome.php"><i class='bx bx-home-circle'></i> <span>Home</span></a></li>
                     <li><a href="dashboardusers.php"><i class='bx bxs-user-detail'></i> <span>Users</span></a></li>
-                    <li><a href="#"><i class='bx bxl-bitcoin'></i> <span>Crypto</span></a></li>
+                    <li><a href="dashboardcrypto.php"><i class='bx bxl-bitcoin'></i> <span>Crypto</span></a></li>
                 </ul>
                 <ul class="logoutlink">
                     <li><a href="logout.php"><span>Log out</span> <i class='bx bx-log-out bx-rotate-180' ></i></a></li>

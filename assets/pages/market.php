@@ -177,7 +177,7 @@ if(!isset($_SESSION['username'])){
                             <td class='table-data last-update green'>+$product[product_perc]%</td>
                             <td class='table-data market-cap'>$$product[product_market_cap]</td>
                             <td class='table-data'><img src='$product[product_chart]' width='100px' height='40px' alt='profit chart'></td>
-                            <td class='table-data'>$addedBy[id], $addedBy[username], $addedBy[user_type]</td>
+                            <td class='table-data'>$addedBy[id] - $addedBy[username] : $addedBy[user_type]</td>
                             <td class='table-data'><button class='btn-trade'>Trade</button></td>
                         </tr>
                     ";

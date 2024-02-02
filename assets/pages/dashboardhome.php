@@ -18,6 +18,9 @@ try{
 
     $adminc = $dc->startConnection()->query("SELECT * FROM user WHERE user_type = 'admin'");
     $adminc = $adminc->rowCount();
+
+    $productsc = $dc->startConnection()->query("SELECT * FROM product");
+    $productsc = $productsc->rowCount()+8;
 }
 catch(PDOException $e){
             echo "Database Connection Failed".$e->getMessage();
@@ -60,7 +63,7 @@ catch(PDOException $e){
                 <div class="dhc-box">
                     <i class='bx bxs-coin-stack' ></i>
                     <h2>Products</h2>
-                    <span>2</span>
+                    <span><?php echo $productsc ?></span>
                 </div>
                 <div class="dhc-box">
                     <i class='bx bxs-user'></i>

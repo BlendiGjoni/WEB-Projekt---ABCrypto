@@ -923,7 +923,7 @@ KODI PER USER PROFILE*/
 
 
 /* //////////////////////////////////////////////////////////////////////////////////
-KODI PER DASHBOARDHOME*/
+KODI PER DASHBOARD HOME*/
 .maindsh{
     display: flex;
 }
@@ -943,6 +943,11 @@ KODI PER DASHBOARDHOME*/
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    transition: 0.3s all ease;
+}
+.dhc-box:hover{
+    background-color: #002D22;
+    color: white;
 }
 .dhc-box i{
     font-size: 40px;
@@ -953,7 +958,7 @@ KODI PER DASHBOARDHOME*/
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////
-KODI PER DASHBOARDUSERS*/
+KODI PER DASHBOARD USERS*/
 .maindsu{
     display: flex;
 }
@@ -1030,6 +1035,90 @@ KODI PER DASHBOARD EDIT USERS*/
     background-color: white;
     border: 1px solid #FDA91D;
 }
+
+
+/* //////////////////////////////////////////////////////////////////////////////////
+KODI PER DASHBOARD EDIT CRYPTO*/
+
+
+.maindscedit{
+    display: flex;
+}
+
+.maindscedit .edit-crypto-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-crypto-form form{
+    padding: 60px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-crypto-form form input{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #FDA91D;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+.edit-crypto-form .inputedit:hover{
+    border: 2px solid #FDA91D;
+}
+.edit-crypto-form .editcryptosubmit{
+    color: white;
+    background-color: #FDA91D;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+.edit-crypto-form .editcryptosubmit:hover{
+    color: #FDA91D;
+    background-color: white;
+    border: 1px solid #FDA91D;
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////
+KODI PER DASHBOARD Crypto*/
+
+.maindsc{
+    display: flex;
+}
+.dashboard-crypto-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-crypto-table{
+    border-collapse: collapse;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.dashboard-crypto-content th{
+    text-align: left;
+    border-block-end: 1px solid #002D22;
+    padding: 10px 20px;
+}
+.dashboard-crypto-content td{
+    border-block-end: 1px solid #002D22;
+    padding: 10px 20px;
+}
+.dashboard-crypto-table td a{
+    color: #C6204C;
+}
+.dashboard-crypto-table .productedit{
+    color: #FDA91D;
+}
+
 
 
 /* //////////////////////////////////////////////////////////////////////////////////
@@ -1122,7 +1211,6 @@ KODI PER MEDIAT(ndryshimin e stilit per te bere krejt faqet responzive) */
     }
     main{
         width: 100%;
-        margin: 3%;
         padding: 0;
     }
     main .main-first-page{
@@ -1249,6 +1337,124 @@ KODI PER MEDIAT(ndryshimin e stilit per te bere krejt faqet responzive) */
         align-items: center;
         justify-content: center;
     }
+    /* //////////////////////////////////////////////////////////////////////////////////
+    KODI PER USER PROFILE*/
+
+    .profilemain{
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        padding: 10%;
+    }
+    .profileinfo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 700px;
+        height: 500px;
+    }
+    /* //////////////////////////////////////////////////////////////////////////////////
+    KODI PER DASHBOARD HOME*/
+    .maindsh{
+        display: flex;
+        flex-direction: column;
+    }
+    .dashboard-home-content{
+        width: 100%;
+        padding: 10% 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+    .dhc-box{
+        padding: 50px 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    /* //////////////////////////////////////////////////////////////////////////////////
+    KODI PER DASHBOARD USERS*/
+    .maindsu{
+        display: flex;
+        flex-direction: column;
+    }
+    .dashboard-users-content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
+    }
+    .dashboard-users-table{
+        display: block;
+    }
+    /* //////////////////////////////////////////////////////////////////////////////////
+    KODI PER DASHBOARD EDIT USERS*/
+
+    .maindsedit{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .maindsedit .editform{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;   
+    }
+
+    /* //////////////////////////////////////////////////////////////////////////////////
+    KODI PER DASHBOARD Crypto*/
+
+    .maindsc{
+        display: flex;
+        flex-direction: column;
+    }
+    .dashboard-crypto-content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
+    }
+    .dashboard-crypto-table{
+        display: block;
+    }
+
+    /* //////////////////////////////////////////////////////////////////////////////////
+    KODI PER DASHBOARD EDIT CRYPTO*/
+
+    .maindscedit{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .maindscedit .edit-crypto-form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
+    }
+
+    /* //////////////////////////////////////////////////////////////////////////////////
+    KODI PER SIDEBAR*/
+
+    .sidebar{
+        width: 100%;
+        height: 700px;
+        background-color: #002D22;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
 }
 @media(max-width: 500px){
     body{
@@ -1298,6 +1504,7 @@ KODI PER MEDIAT(ndryshimin e stilit per te bere krejt faqet responzive) */
     .buycrypto_main .buycrypto-hero form{
         width: 95%;
     }
+    
     footer{
         width: 100%;
     }
